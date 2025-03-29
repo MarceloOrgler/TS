@@ -76,7 +76,7 @@ ggplot(df, aes(x = time)) +
 cat("Estimated Observation Noise Variance (sigma^2_epsilon):", sigma2_epsilon, "\n")
 cat("Estimated State Noise Variance (sigma^2_eta):", sigma2_eta, "\n")
 
-# O estimador de MLE é Assintoticamente consistente, 
+# O estimador de MLE é consistente, 
 #então para T alto, o estimador MLe das variância é próximo ao verdadeiro
 
 # recuperando manualmente a séria do nível ajsutada:
