@@ -380,7 +380,7 @@
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{165}{\boxspacing}
+\prompt{In}{incolor}{384}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{options}\PY{p}{(}\PY{n}{repr.plot.width}\PY{o}{=}\PY{l+m}{20}\PY{p}{,} \PY{n}{repr.plot.height}\PY{o}{=}\PY{l+m}{10}\PY{p}{)}  \PY{c+c1}{\PYZsh{} Ajuste dos gráficos}
 \end{Verbatim}
@@ -389,7 +389,7 @@
     Instalando e carregando as bibliotecas utilizadas
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{166}{\boxspacing}
+\prompt{In}{incolor}{385}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{library}\PY{p}{(}\PY{n}{pacman}\PY{p}{)}
 \PY{n+nf}{p\PYZus{}load}\PY{p}{(}\PY{n}{ggplot2}\PY{p}{,}\PY{n}{forecast}\PY{p}{,}\PY{n}{dlm}\PY{p}{,}\PY{n}{numDeriv}\PY{p}{,}\PY{n}{plotly}\PY{p}{)}
@@ -399,7 +399,7 @@
     Carregando as funções auxiliares, que não podem ser mostras aqui ainda
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{176}{\boxspacing}
+\prompt{In}{incolor}{386}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{source}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{funcoes\PYZus{}auxiliares.R\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
@@ -410,7 +410,7 @@
     Simulando o y conforme a minha função do Trabalho 1:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{152}{\boxspacing}
+\prompt{In}{incolor}{387}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{y\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{simul\PYZus{}y\PYZus{}mnl}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{l+m}{10}\PY{p}{,}\PY{l+m}{0.5}\PY{p}{,}\PY{n}{n\PYZus{}seed}\PY{o}{=}\PY{l+m}{1}\PY{p}{)}
 \end{Verbatim}
@@ -419,9 +419,19 @@
     Utilizando o StructTs para estimar os hyperparâmetros via MLE:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{153}{\boxspacing}
+\prompt{In}{incolor}{388}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fit} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{StructTS}\PY{p}{(}\PY{n}{y\PYZus{}mnl}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{level\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    Sem usar a função de simulação
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{389}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{dados} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{readRDS}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{dados.rds\PYZdq{}}\PY{p}{)}
+\PY{n}{fit} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{StructTS}\PY{p}{(}\PY{n}{dados}\PY{o}{\PYZdl{}}\PY{n}{vetor1}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{level\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
@@ -429,7 +439,7 @@
 ajustado:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{154}{\boxspacing}
+\prompt{In}{incolor}{390}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}
   \PY{n}{time} \PY{o}{=} \PY{l+m}{1}\PY{o}{:}\PY{n+nf}{length}\PY{p}{(}\PY{n}{y\PYZus{}mnl}\PY{p}{)}\PY{p}{,}
@@ -443,7 +453,7 @@ ajustado:
 hyperparâmetros:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{155}{\boxspacing}
+\prompt{In}{incolor}{311}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{} Extract estimated variances}
 \PY{n}{sigma2\PYZus{}epsilon} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{coef}\PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{epsilon\PYZdq{}}\PY{p}{]}
@@ -455,7 +465,7 @@ hyperparâmetros:
 utilizando o ggplot2
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{156}{\boxspacing}
+\prompt{In}{incolor}{312}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{ggplot}\PY{p}{(}\PY{p}{)} \PY{o}{+} 
 \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data}\PY{o}{=}\PY{n}{df}\PY{p}{,}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{observed}\PY{p}{,}\PY{n}{x} \PY{o}{=} \PY{n}{time}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Observed y\PYZus{}mnl\PYZdq{}}\PY{p}{)}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{1}\PY{p}{)} \PY{o}{+}
@@ -482,14 +492,14 @@ utilizando o ggplot2
 \end{tcolorbox}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_15_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_17_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     Recuperando o valor dos hyperparâmetros:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{157}{\boxspacing}
+\prompt{In}{incolor}{313}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{} Print estimated variances}
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated Observation Noise Variance (sigma\PYZca{}2\PYZus{}epsilon):\PYZdq{}}\PY{p}{,} \PY{n}{sigma2\PYZus{}epsilon}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
@@ -506,21 +516,21 @@ Estimated State Noise Variance (sigma\^{}2\_eta): 0.5600975
 estimativas melhoram.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{158}{\boxspacing}
+\prompt{In}{incolor}{314}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{y\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{simul\PYZus{}y\PYZus{}mnl}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{1000}\PY{p}{,}\PY{l+m}{10}\PY{p}{,}\PY{l+m}{0.5}\PY{p}{,}\PY{l+m}{1}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{159}{\boxspacing}
+\prompt{In}{incolor}{315}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fit} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{StructTS}\PY{p}{(}\PY{n}{y\PYZus{}mnl}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{level\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{160}{\boxspacing}
+\prompt{In}{incolor}{316}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}
   \PY{n}{time} \PY{o}{=} \PY{l+m}{1}\PY{o}{:}\PY{n+nf}{length}\PY{p}{(}\PY{n}{y\PYZus{}mnl}\PY{p}{)}\PY{p}{,}
@@ -531,7 +541,7 @@ estimativas melhoram.
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{161}{\boxspacing}
+\prompt{In}{incolor}{317}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{sigma2\PYZus{}epsilon} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{coef}\PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{epsilon\PYZdq{}}\PY{p}{]}
 \PY{n}{sigma2\PYZus{}eta} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{coef}\PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{level\PYZdq{}}\PY{p}{]}
@@ -539,7 +549,7 @@ estimativas melhoram.
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{162}{\boxspacing}
+\prompt{In}{incolor}{383}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated Observation Noise Variance (sigma\PYZca{}2\PYZus{}epsilon):\PYZdq{}}\PY{p}{,} \PY{n}{sigma2\PYZus{}epsilon}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated State Noise Variance (sigma\PYZca{}2\PYZus{}eta):\PYZdq{}}\PY{p}{,} \PY{n}{sigma2\PYZus{}eta}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
@@ -547,8 +557,8 @@ estimativas melhoram.
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-Estimated Observation Noise Variance (sigma\^{}2\_epsilon): 10.83406
-Estimated State Noise Variance (sigma\^{}2\_eta): 0.6076557
+Estimated Observation Noise Variance (sigma\^{}2\_epsilon): 4
+Estimated State Noise Variance (sigma\^{}2\_eta): 1
     \end{Verbatim}
 
     Parece que com mais observações, as estimativas ficam mais próximas do
@@ -563,7 +573,7 @@ variâncias estimadas, conseguimos reproduzir a série do nível estimado?
     Novamente:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{163}{\boxspacing}
+\prompt{In}{incolor}{319}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{y\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{simul\PYZus{}y\PYZus{}mnl}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{1000}\PY{p}{,}\PY{l+m}{1}\PY{p}{,}\PY{l+m}{0.5}\PY{p}{,}\PY{l+m}{1}\PY{p}{)}
 
@@ -574,21 +584,21 @@ variâncias estimadas, conseguimos reproduzir a série do nível estimado?
     Utilizando a função da questão 2 do trabalho 1:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{177}{\boxspacing}
+\prompt{In}{incolor}{320}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fitted}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{mnl\PYZus{}fk}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{1000}\PY{p}{,}\PY{n}{y\PYZus{}mnl}\PY{p}{,}\PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{coef}\PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{epsilon\PYZdq{}}\PY{p}{]}\PY{p}{,}\PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{coef}\PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{level\PYZdq{}}\PY{p}{]}\PY{p}{,}\PY{n}{a0}\PY{o}{=}\PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{model0}\PY{o}{\PYZdl{}}\PY{n}{a}\PY{p}{,}\PY{n}{p0}\PY{o}{=}\PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{model0}\PY{o}{\PYZdl{}}\PY{n}{P}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{178}{\boxspacing}
+\prompt{In}{incolor}{321}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df\PYZus{}fitted\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}\PY{n}{manual} \PY{o}{=} \PY{n}{fitted}\PY{o}{\PYZdl{}}\PY{n}{a}\PY{p}{,}\PY{n}{structts}\PY{o}{=}\PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{fitted}\PY{p}{[}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{level\PYZsq{}}\PY{p}{]}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{179}{\boxspacing}
+\prompt{In}{incolor}{322}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{tail}\PY{p}{(}\PY{n}{df\PYZus{}fitted\PYZus{}mnl}\PY{p}{)}
 \end{Verbatim}
@@ -610,7 +620,7 @@ variâncias estimadas, conseguimos reproduzir a série do nível estimado?
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{181}{\boxspacing}
+\prompt{In}{incolor}{323}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{head}\PY{p}{(}\PY{n}{df\PYZus{}fitted\PYZus{}mnl}\PY{p}{)}
 \end{Verbatim}
@@ -636,10 +646,10 @@ variâncias estimadas, conseguimos reproduzir a série do nível estimado?
     Definindo os parâmetros:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{200}{\boxspacing}
+\prompt{In}{incolor}{437}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nb+bp}{T} \PY{o}{\PYZlt{}\PYZhy{}} \PY{l+m}{100}
-\PY{n}{sigma2\PYZus{}epsilon} \PY{o}{\PYZlt{}\PYZhy{}} \PY{l+m}{1}
+\PY{n}{sigma2\PYZus{}epsilon} \PY{o}{\PYZlt{}\PYZhy{}} \PY{l+m}{4}
 \PY{n}{sigma2\PYZus{}eta} \PY{o}{\PYZlt{}\PYZhy{}} \PY{l+m}{1}   
 \PY{n}{sigma2\PYZus{}qsi} \PY{o}{\PYZlt{}\PYZhy{}} \PY{l+m}{0.1}
 \PY{n}{n\PYZus{}seed} \PY{o}{\PYZlt{}\PYZhy{}} \PY{l+m}{42}
@@ -649,7 +659,7 @@ variâncias estimadas, conseguimos reproduzir a série do nível estimado?
     Simulando a série:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{201}{\boxspacing}
+\prompt{In}{incolor}{355}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{y\PYZus{}mtl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{simul\PYZus{}y\PYZus{}mtl}\PY{p}{(}\PY{n+nb+bp}{T}\PY{p}{,} \PY{n}{sigma2\PYZus{}eta}\PY{o}{=}\PY{n}{sigma2\PYZus{}eta}\PY{p}{,} \PY{n}{sigma2\PYZus{}qsi}\PY{o}{=}\PY{n}{sigma2\PYZus{}qsi}\PY{p}{,} \PY{n}{sigma2\PYZus{}epsilon}\PY{o}{=}\PY{n}{sigma2\PYZus{}epsilon}\PY{p}{,} \PY{n}{n\PYZus{}seed}\PY{o}{=}\PY{n}{n\PYZus{}seed}\PY{p}{)}
 \end{Verbatim}
@@ -658,7 +668,7 @@ variâncias estimadas, conseguimos reproduzir a série do nível estimado?
     estimando os hyperparâmtros usando MLE. Novo argumento: `Trend'
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{202}{\boxspacing}
+\prompt{In}{incolor}{356}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fit\PYZus{}mtl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{StructTS}\PY{p}{(}\PY{n}{y\PYZus{}mtl}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{trend\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
@@ -667,7 +677,7 @@ variâncias estimadas, conseguimos reproduzir a série do nível estimado?
     Montando um dataframe com a séries:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{203}{\boxspacing}
+\prompt{In}{incolor}{357}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df\PYZus{}mtl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}
   \PY{n}{time} \PY{o}{=} \PY{l+m}{1}\PY{o}{:}\PY{n+nb+bp}{T}\PY{p}{,}
@@ -681,7 +691,7 @@ variâncias estimadas, conseguimos reproduzir a série do nível estimado?
     Fazendo os gráficos usando ggplot2:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{226}{\boxspacing}
+\prompt{In}{incolor}{358}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{ggplot}\PY{p}{(}\PY{p}{)} \PY{o}{+}
   \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data}\PY{o}{=}\PY{n}{df\PYZus{}mtl}\PY{p}{,}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{time}\PY{p}{,}\PY{n}{y} \PY{o}{=} \PY{n}{observed}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Observed\PYZdq{}}\PY{p}{)}\PY{p}{,} \PY{n}{size} \PY{o}{=} \PY{l+m}{1}\PY{p}{)} \PY{o}{+}
@@ -694,20 +704,24 @@ variâncias estimadas, conseguimos reproduzir a série do nível estimado?
     \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Legend\PYZdq{}}
   \PY{p}{)} \PY{o}{+}
   \PY{n+nf}{theme\PYZus{}minimal}\PY{p}{(}\PY{p}{)}\PY{o}{+}
+    \PY{n+nf}{theme}\PY{p}{(}
+    \PY{n}{panel.grid.major} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{gray\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{1}\PY{p}{)}\PY{p}{,}
+    \PY{n}{panel.grid.minor} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{lightgray\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{0.5}\PY{p}{)}\PY{p}{,}
+    \PY{n}{axis.line} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{1}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Make axis lines thicker and black}
+    \PY{n}{axis.ticks} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{0.8}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Make ticks more visible}
+    \PY{n}{axis.text} \PY{o}{=} \PY{n+nf}{element\PYZus{}text}\PY{p}{(}\PY{n}{size} \PY{o}{=} \PY{l+m}{12}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Adjust axis text size and color}
+    \PY{n}{axis.title} \PY{o}{=} \PY{n+nf}{element\PYZus{}text}\PY{p}{(}\PY{n}{size} \PY{o}{=} \PY{l+m}{14}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{)}  \PY{c+c1}{\PYZsh{} Adjust axis title size and color}
+    \PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
-    \begin{Verbatim}[commandchars=\\\{\}, frame=single, framerule=2mm, rulecolor=\color{outerrorbackground}]
-Error in parse(text = input): <text>:12:0: unexpected end of input
-10:   ) +
-11:   theme\_minimal()+
-   \^{}
-Traceback:
-
-    \end{Verbatim}
-
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_46_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{230}{\boxspacing}
+\prompt{In}{incolor}{359}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{ggplot}\PY{p}{(}\PY{p}{)} \PY{o}{+}
   \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data}\PY{o}{=}\PY{n}{df\PYZus{}mtl}\PY{p}{,}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{time}\PY{p}{,}\PY{n}{y} \PY{o}{=} \PY{n}{adjusted\PYZus{}trend}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Adjusted Trend\PYZdq{}}\PY{p}{)}\PY{p}{,} \PY{n}{size} \PY{o}{=} \PY{l+m}{1}\PY{p}{)} \PY{o}{+}
@@ -737,14 +751,14 @@ Don't know how to automatically pick scale for object of type
     \end{Verbatim}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_45_1.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_47_1.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     Valores dos parâmetros:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{212}{\boxspacing}
+\prompt{In}{incolor}{360}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated Observation Noise Variance (sigma\PYZca{}2\PYZus{}epsilon):\PYZdq{}}\PY{p}{,} \PY{n}{fit\PYZus{}mtl}\PY{o}{\PYZdl{}}\PY{n}{coef}\PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{epsilon\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated State Noise Variance (sigma\PYZca{}2\PYZus{}eta):\PYZdq{}}\PY{p}{,} \PY{n}{fit\PYZus{}mtl}\PY{o}{\PYZdl{}}\PY{n}{coef}\PY{p}{[}\PY{l+s}{\PYZdq{}}\PY{l+s}{level\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
@@ -753,15 +767,15 @@ Don't know how to automatically pick scale for object of type
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-Estimated Observation Noise Variance (sigma\^{}2\_epsilon): 0.9959496
-Estimated State Noise Variance (sigma\^{}2\_eta): 1.17139
-Estimated State Noise Variance (sigma\^{}2\_qsi): 0.006570937
+Estimated Observation Noise Variance (sigma\^{}2\_epsilon): 4.028132
+Estimated State Noise Variance (sigma\^{}2\_eta): 1.495563
+Estimated State Noise Variance (sigma\^{}2\_qsi): 0.003680569
     \end{Verbatim}
 
     Agora vamos fazer previsões e suavização:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{213}{\boxspacing}
+\prompt{In}{incolor}{368}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{y\PYZus{}mtl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{simul\PYZus{}y\PYZus{}mtl}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{l+m}{10}\PY{p}{,}\PY{l+m}{0.1}\PY{p}{,}\PY{l+m}{1}\PY{p}{,}\PY{n}{n\PYZus{}seed}\PY{o}{=}\PY{l+m}{1}\PY{p}{)}
 \end{Verbatim}
@@ -770,7 +784,7 @@ Estimated State Noise Variance (sigma\^{}2\_qsi): 0.006570937
     Ajustando o modelo com StructTS
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{214}{\boxspacing}
+\prompt{In}{incolor}{369}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fit} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{StructTS}\PY{p}{(}\PY{n}{y\PYZus{}mtl}\PY{p}{,} \PY{n}{type} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{trend\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
@@ -779,7 +793,7 @@ Estimated State Noise Variance (sigma\^{}2\_qsi): 0.006570937
     definindo o número de passos a frente:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{216}{\boxspacing}
+\prompt{In}{incolor}{370}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{h} \PY{o}{\PYZlt{}\PYZhy{}} \PY{l+m}{20}
 \end{Verbatim}
@@ -788,7 +802,7 @@ Estimated State Noise Variance (sigma\^{}2\_qsi): 0.006570937
     Criando o objeto com as previsões:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{221}{\boxspacing}
+\prompt{In}{incolor}{371}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{forecast\PYZus{}obj} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{forecast}\PY{p}{(}\PY{n}{fit}\PY{p}{,} \PY{n}{h} \PY{o}{=} \PY{n}{h}\PY{p}{,} \PY{n}{level} \PY{o}{=} \PY{l+m}{90}\PY{p}{)}
 \end{Verbatim}
@@ -797,7 +811,7 @@ Estimated State Noise Variance (sigma\^{}2\_qsi): 0.006570937
     Fazendo a suavização
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{222}{\boxspacing}
+\prompt{In}{incolor}{372}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{smoothed} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{tsSmooth}\PY{p}{(}\PY{n}{fit}\PY{p}{)}
 \end{Verbatim}
@@ -806,7 +820,7 @@ Estimated State Noise Variance (sigma\^{}2\_qsi): 0.006570937
     Criando dataframe para o ggplot
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{223}{\boxspacing}
+\prompt{In}{incolor}{373}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}
   \PY{n}{Tempo} \PY{o}{=} \PY{l+m}{1}\PY{o}{:}\PY{n+nb+bp}{T}\PY{p}{,}
@@ -817,7 +831,7 @@ Estimated State Noise Variance (sigma\^{}2\_qsi): 0.006570937
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{224}{\boxspacing}
+\prompt{In}{incolor}{374}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df\PYZus{}pred} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}
   \PY{n}{Tempo} \PY{o}{=} \PY{p}{(}\PY{n+nb+bp}{T} \PY{o}{+} \PY{l+m}{1}\PY{p}{)}\PY{o}{:}\PY{p}{(}\PY{n+nb+bp}{T} \PY{o}{+} \PY{n}{h}\PY{p}{)}\PY{p}{,}
@@ -829,7 +843,7 @@ Estimated State Noise Variance (sigma\^{}2\_qsi): 0.006570937
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{231}{\boxspacing}
+\prompt{In}{incolor}{375}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{ggplot}\PY{p}{(}\PY{p}{)} \PY{o}{+}
   \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{df}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{Tempo}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{Observado}\PY{p}{)}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{,} \PY{n}{size} \PY{o}{=} \PY{l+m}{1}\PY{p}{)} \PY{o}{+}
@@ -852,7 +866,7 @@ Estimated State Noise Variance (sigma\^{}2\_qsi): 0.006570937
 \end{tcolorbox}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_61_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_63_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -861,16 +875,16 @@ Estimated State Noise Variance (sigma\^{}2\_qsi): 0.006570937
     Como sempre fazemos :
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{243}{\boxspacing}
+\prompt{In}{incolor}{392}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{100}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{244}{\boxspacing}
+\prompt{In}{incolor}{393}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-\PY{n}{y\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{simul\PYZus{}y\PYZus{}mnl}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{n+nb+bp}{T}\PY{p}{,}\PY{l+m}{1}\PY{p}{,}\PY{l+m}{0.5}\PY{p}{,}\PY{l+m}{1}\PY{p}{)}
+\PY{n}{y\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{simul\PYZus{}y\PYZus{}mnl}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{n+nb+bp}{T}\PY{p}{,}\PY{l+m}{10}\PY{p}{,}\PY{l+m}{0.5}\PY{p}{,}\PY{l+m}{1}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
@@ -880,7 +894,7 @@ and local trend (MTL) models by setting up the system matrices required
 for the Kalman filter.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{245}{\boxspacing}
+\prompt{In}{incolor}{394}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{build\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{theta}\PY{p}{)} \PY{p}{\PYZob{}}
     \PY{n+nf}{dlmModPoly}\PY{p}{(}\PY{n}{order} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{dV} \PY{o}{=} \PY{n}{theta}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{p}{,} \PY{n}{dW} \PY{o}{=} \PY{n}{theta}\PY{p}{[}\PY{l+m}{2}\PY{p}{]}\PY{p}{)}
@@ -891,7 +905,7 @@ for the Kalman filter.
     estimando o modelo via MLE
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{246}{\boxspacing}
+\prompt{In}{incolor}{395}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fit} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{dlmMLE}\PY{p}{(}\PY{n}{y\PYZus{}mnl}\PY{p}{,} \PY{n}{parm} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+m}{100}\PY{p}{,} \PY{l+m}{2}\PY{p}{)}\PY{p}{,} \PY{n}{build\PYZus{}mnl}\PY{p}{,} \PY{n}{lower} \PY{o}{=} \PY{n+nf}{rep}\PY{p}{(}\PY{l+m}{1e\PYZhy{}4}\PY{p}{,} \PY{l+m}{2}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
@@ -904,7 +918,7 @@ lower: constraint in param values
     Recuperando os valores estimados dos hyperparâmetros:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{247}{\boxspacing}
+\prompt{In}{incolor}{396}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{mod\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{build\PYZus{}mnl}\PY{p}{(}\PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{par}\PY{p}{)}
 \PY{n+nf}{drop}\PY{p}{(}\PY{n+nf}{V}\PY{p}{(}\PY{n}{mod\PYZus{}mnl}\PY{p}{)}\PY{p}{)}
@@ -912,10 +926,10 @@ lower: constraint in param values
 \end{Verbatim}
 \end{tcolorbox}
 
-    0.718626480364571
+    7.73678477296794
 
     
-    0.436154015222723
+    0.56010002101121
 
     
     The inverse of the Hessian matrix of the negative loglikelihood function
@@ -926,7 +940,7 @@ estimators
     obtendo a hessiana avaliada no MLE
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{249}{\boxspacing}
+\prompt{In}{incolor}{397}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{hs} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{hessian}\PY{p}{(}\PY{n+nf}{function}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{n+nf}{dlmLL}\PY{p}{(}\PY{n}{y\PYZus{}mnl}\PY{p}{,} \PY{n+nf}{build\PYZus{}mnl}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{par}\PY{p}{)}
 \end{Verbatim}
@@ -935,7 +949,7 @@ estimators
     Checando se é positiva definida
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{250}{\boxspacing}
+\prompt{In}{incolor}{398}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{all}\PY{p}{(}\PY{n+nf}{eigen}\PY{p}{(}\PY{n}{hs}\PY{p}{,} \PY{n}{only.values} \PY{o}{=} \PY{k+kc}{TRUE}\PY{p}{)}\PY{o}{\PYZdl{}}\PY{n}{values} \PY{o}{\PYZgt{}} \PY{l+m}{0}\PY{p}{)}
 \end{Verbatim}
@@ -947,14 +961,14 @@ estimators
     Calculando o Inverso da Hessiana
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{251}{\boxspacing}
+\prompt{In}{incolor}{399}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{aVar} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{solve}\PY{p}{(}\PY{n}{hs}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{252}{\boxspacing}
+\prompt{In}{incolor}{400}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Standard Error of dV:\PYZdq{}}\PY{p}{,} \PY{n+nf}{sqrt}\PY{p}{(}\PY{n+nf}{diag}\PY{p}{(}\PY{n}{aVar}\PY{p}{)}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Standard Error of dW:\PYZdq{}}\PY{p}{,} \PY{n+nf}{sqrt}\PY{p}{(}\PY{n+nf}{diag}\PY{p}{(}\PY{n}{aVar}\PY{p}{)}\PY{p}{[}\PY{l+m}{2}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
@@ -962,14 +976,14 @@ estimators
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-Standard Error of dV: 0.1579155
-Standard Error of dW: 0.1435128
+Standard Error of dV: 1.262764
+Standard Error of dW: 0.3122962
     \end{Verbatim}
 
     Aplicando o filtro e suavização:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{256}{\boxspacing}
+\prompt{In}{incolor}{401}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{smooth\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{dlmSmooth}\PY{p}{(}\PY{n}{y\PYZus{}mnl}\PY{p}{,} \PY{n}{mod\PYZus{}mnl}\PY{p}{)}
 \PY{n}{filter\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{dlmFilter}\PY{p}{(}\PY{n}{y\PYZus{}mnl}\PY{p}{,}\PY{n}{mod\PYZus{}mnl}\PY{p}{)}
@@ -979,7 +993,7 @@ Standard Error of dW: 0.1435128
     Extração dos estados suavizados
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{258}{\boxspacing}
+\prompt{In}{incolor}{403}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{mu\PYZus{}hat} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{drop}\PY{p}{(}\PY{n}{smooth\PYZus{}mnl}\PY{o}{\PYZdl{}}\PY{n}{s}\PY{p}{)}
 \end{Verbatim}
@@ -988,16 +1002,16 @@ Standard Error of dW: 0.1435128
     Gerando as previsões com dlmForecast
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{259}{\boxspacing}
+\prompt{In}{incolor}{404}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fore\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{dlmForecast}\PY{p}{(}\PY{n}{filter\PYZus{}mnl}\PY{p}{,} \PY{n}{nAhead} \PY{o}{=} \PY{l+m}{10}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
-    matriz de valores esperados para futuras obs
+    valores esperados para futuras obs
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{260}{\boxspacing}
+\prompt{In}{incolor}{405}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{f} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{fore\PYZus{}mnl}\PY{o}{\PYZdl{}}\PY{n}{f}
 \end{Verbatim}
@@ -1015,7 +1029,7 @@ Standard Error of dW: 0.1435128
     Calculando o intervalo preditivo (banda de 50\%)
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{262}{\boxspacing}
+\prompt{In}{incolor}{408}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{hwidth} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{qnorm}\PY{p}{(}\PY{l+m}{0.25}\PY{p}{,} \PY{n}{lower} \PY{o}{=} \PY{k+kc}{FALSE}\PY{p}{)} \PY{o}{*} \PY{n+nf}{sqrt}\PY{p}{(}\PY{n+nf}{unlist}\PY{p}{(}\PY{n}{Q}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
@@ -1024,7 +1038,7 @@ Standard Error of dW: 0.1435128
     Criando o intervalo de previsão
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{263}{\boxspacing}
+\prompt{In}{incolor}{409}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{lower} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{f} \PY{o}{\PYZhy{}} \PY{n}{hwidth}
 \PY{n}{upper} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{f} \PY{o}{+} \PY{n}{hwidth}
@@ -1034,7 +1048,7 @@ Standard Error of dW: 0.1435128
     Criar uma data frame para facilitar o uso no ggplot2
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{264}{\boxspacing}
+\prompt{In}{incolor}{410}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df\PYZus{}forecast} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}
   \PY{n}{Time} \PY{o}{=} \PY{p}{(}\PY{n+nf}{length}\PY{p}{(}\PY{n}{y\PYZus{}mnl}\PY{p}{)} \PY{o}{+} \PY{l+m}{1}\PY{p}{)}\PY{o}{:}\PY{p}{(}\PY{n+nf}{length}\PY{p}{(}\PY{n}{y\PYZus{}mnl}\PY{p}{)} \PY{o}{+} \PY{l+m}{10}\PY{p}{)}\PY{p}{,}
@@ -1048,7 +1062,7 @@ Standard Error of dW: 0.1435128
     Criando o gráfico
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{267}{\boxspacing}
+\prompt{In}{incolor}{411}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{df\PYZus{}forecast}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{Time}\PY{p}{)}\PY{p}{)} \PY{o}{+}
   \PY{c+c1}{\PYZsh{} Adiciona as previsões como uma linha vermelha}
@@ -1090,21 +1104,21 @@ Standard Error of dW: 0.1435128
 \end{tcolorbox}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_98_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_100_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     Análise dos resíduos
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{268}{\boxspacing}
+\prompt{In}{incolor}{412}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df\PYZus{}residual} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}\PY{n}{resid} \PY{o}{=} \PY{n+nf}{residuals}\PY{p}{(}\PY{n}{filter\PYZus{}mnl}\PY{p}{,} \PY{n}{sd} \PY{o}{=} \PY{k+kc}{FALSE}\PY{p}{)}\PY{p}{,}\PY{n}{zero}\PY{o}{=}\PY{n+nf}{rep}\PY{p}{(}\PY{l+m}{0}\PY{p}{,}\PY{n+nb+bp}{T}\PY{p}{)}\PY{p}{,}\PY{n}{tempo}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{seq}\PY{p}{(}\PY{l+m}{1}\PY{o}{:}\PY{n+nb+bp}{T}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{271}{\boxspacing}
+\prompt{In}{incolor}{414}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{ggplot}\PY{p}{(}\PY{p}{)} \PY{o}{+}
 \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{df\PYZus{}residual}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{tempo}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{resid}\PY{p}{)}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{,} \PY{n}{size} \PY{o}{=} \PY{l+m}{1}\PY{p}{)} \PY{o}{+}
@@ -1124,14 +1138,14 @@ Standard Error of dW: 0.1435128
 \end{tcolorbox}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_101_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_103_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
     testando se os resíduos são normais:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{274}{\boxspacing}
+\prompt{In}{incolor}{415}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{shapiro.test}\PY{p}{(}\PY{n}{df\PYZus{}residual}\PY{o}{\PYZdl{}}\PY{n}{resid}\PY{p}{)}
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{media\PYZus{}residuos:\PYZdq{}}\PY{p}{,}\PY{n+nf}{mean}\PY{p}{(}\PY{n}{df\PYZus{}residual}\PY{o}{\PYZdl{}}\PY{n}{resid}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{\PYZbs{}n\PYZsq{}}\PY{p}{)}
@@ -1145,14 +1159,14 @@ Standard Error of dW: 0.1435128
 	Shapiro-Wilk normality test
 
 data:  df\_residual\$resid
-W = 0.98873, p-value = 0.5638
+W = 0.99154, p-value = 0.787
 
     \end{Verbatim}
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-media\_residuos: -0.03384876
-var\_residuos: 0.9988415
+media\_residuos: -0.02388998
+var\_residuos: 0.9994234
     \end{Verbatim}
 
     \section{Implementando a MLE}\label{implementando-a-mle}
@@ -1163,7 +1177,7 @@ implementação de estimação
     Gerando a série e fazendo a estimação usando pacote
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{275}{\boxspacing}
+\prompt{In}{incolor}{416}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{1000}
 \PY{n}{y\PYZus{}mnl} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{simul\PYZus{}y\PYZus{}mnl}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{n+nb+bp}{T}\PY{p}{,}\PY{l+m}{1}\PY{p}{,}\PY{l+m}{0.5}\PY{p}{,}\PY{l+m}{1}\PY{p}{)}
@@ -1176,7 +1190,7 @@ implementação de estimação
     definindo o espaço paramétrico:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{276}{\boxspacing}
+\prompt{In}{incolor}{417}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{sigma\PYZus{}epsilon2\PYZus{}vals} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{seq}\PY{p}{(}\PY{l+m}{0.1}\PY{p}{,}\PY{l+m}{4}\PY{p}{,} \PY{n}{length.out} \PY{o}{=} \PY{l+m}{100}\PY{p}{)}
 \PY{n}{sigma\PYZus{}eta2\PYZus{}vals} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{seq}\PY{p}{(}\PY{l+m}{0.1}\PY{p}{,} \PY{l+m}{4}\PY{p}{,} \PY{n}{length.out} \PY{o}{=} \PY{l+m}{100}\PY{p}{)}
@@ -1214,17 +1228,71 @@ implementação de estimação
 hyperparâmetros:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{277}{\boxspacing}
+\prompt{In}{incolor}{419}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nf}{length}\PY{p}{(}\PY{n}{sigma\PYZus{}epsilon2\PYZus{}vals}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    100
+
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{420}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nf}{length}\PY{p}{(}\PY{n}{sigma\PYZus{}eta2\PYZus{}vals}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    100
+
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{422}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{likelihood\PYZus{}matrix} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{outer}\PY{p}{(}\PY{n}{sigma\PYZus{}epsilon2\PYZus{}vals}\PY{p}{,} \PY{n}{sigma\PYZus{}eta2\PYZus{}vals}\PY{p}{,} 
                            \PY{n+nf}{Vectorize}\PY{p}{(}\PY{n+nf}{function}\PY{p}{(}\PY{n}{se}\PY{p}{,} \PY{n}{sw}\PY{p}{)} \PY{n+nf}{logLik\PYZus{}mnl}\PY{p}{(}\PY{n+nf}{c}\PY{p}{(}\PY{n}{se}\PY{p}{,} \PY{n}{sw}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{423}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nf}{dim}\PY{p}{(}\PY{n}{likelihood\PYZus{}matrix}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{enumerate*}
+\item 100
+\item 100
+\end{enumerate*}
+
+
+    
     transformando em um df para usar o ggplot2
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{282}{\boxspacing}
+\prompt{In}{incolor}{426}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nf}{expand.grid}\PY{p}{(}\PY{n+nf}{c}\PY{p}{(}\PY{l+m}{1}\PY{p}{,}\PY{l+m}{2}\PY{p}{)}\PY{p}{,}\PY{n+nf}{c}\PY{p}{(}\PY{l+m}{10}\PY{p}{,}\PY{l+m}{20}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    A data.frame: 4 × 2
+\begin{tabular}{ll}
+ Var1 & Var2\\
+ <dbl> & <dbl>\\
+\hline
+	 1 & 10\\
+	 2 & 10\\
+	 1 & 20\\
+	 2 & 20\\
+\end{tabular}
+
+
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{427}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{likelihood\PYZus{}df} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{expand.grid}\PY{p}{(}\PY{n}{sigma\PYZus{}epsilon2} \PY{o}{=} \PY{n}{sigma\PYZus{}epsilon2\PYZus{}vals}\PY{p}{,} 
                              \PY{n}{sigma\PYZus{}eta2} \PY{o}{=} \PY{n}{sigma\PYZus{}eta2\PYZus{}vals}\PY{p}{)}
@@ -1234,7 +1302,7 @@ hyperparâmetros:
     adicionando a verossimilhança no df
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{284}{\boxspacing}
+\prompt{In}{incolor}{428}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{likelihood\PYZus{}df}\PY{o}{\PYZdl{}}\PY{n}{logLik} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.vector}\PY{p}{(}\PY{n}{likelihood\PYZus{}matrix}\PY{p}{)}
 \end{Verbatim}
@@ -1245,7 +1313,7 @@ hyperparâmetros:
     pacote:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{286}{\boxspacing}
+\prompt{In}{incolor}{429}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated sigma\PYZca{}2\PYZus{}epsilon:\PYZdq{}}\PY{p}{,} \PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{par}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated sigma\PYZca{}2\PYZus{}eta:\PYZdq{}}\PY{p}{,} \PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{par}\PY{p}{[}\PY{l+m}{2}\PY{p}{]}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
@@ -1260,7 +1328,7 @@ Estimated sigma\^{}2\_eta: 0.5647697
     manual:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{289}{\boxspacing}
+\prompt{In}{incolor}{430}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{mle\PYZus{}estimates} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{likelihood\PYZus{}df} \PY{o}{\PYZpc{}\PYZgt{}\PYZpc{}}
   \PY{n+nf}{filter}\PY{p}{(}\PY{n}{logLik} \PY{o}{==} \PY{n+nf}{max}\PY{p}{(}\PY{n}{logLik}\PY{p}{)}\PY{p}{)} \PY{o}{\PYZpc{}\PYZgt{}\PYZpc{}}
@@ -1279,16 +1347,21 @@ Estimated sigma\^{}2\_eta: 0.5727273
     \end{Verbatim}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{290}{\boxspacing}
+\prompt{In}{incolor}{432}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{o}{?}\PY{n}{plot\PYZus{}ly}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{436}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fig} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{plot\PYZus{}ly}\PY{p}{(}
-  \PY{n}{x} \PY{o}{=} \PY{n+nf}{unique}\PY{p}{(}\PY{n}{likelihood\PYZus{}df}\PY{o}{\PYZdl{}}\PY{n}{sigma\PYZus{}epsilon2}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} X\PYZhy{}axis (sigma\PYZus{}epsilon2 values)}
-  \PY{n}{y} \PY{o}{=} \PY{n+nf}{unique}\PY{p}{(}\PY{n}{likelihood\PYZus{}df}\PY{o}{\PYZdl{}}\PY{n}{sigma\PYZus{}eta2}\PY{p}{)}\PY{p}{,}      \PY{c+c1}{\PYZsh{} Y\PYZhy{}axis (sigma\PYZus{}eta2 values)}
-  \PY{n}{z} \PY{o}{=} \PY{n+nf}{matrix}\PY{p}{(}\PY{n}{likelihood\PYZus{}df}\PY{o}{\PYZdl{}}\PY{n}{logLik}\PY{p}{,} 
-             \PY{n}{nrow} \PY{o}{=} \PY{n+nf}{length}\PY{p}{(}\PY{n+nf}{unique}\PY{p}{(}\PY{n}{likelihood\PYZus{}df}\PY{o}{\PYZdl{}}\PY{n}{sigma\PYZus{}epsilon2}\PY{p}{)}\PY{p}{)}\PY{p}{,} 
-             \PY{n}{ncol} \PY{o}{=} \PY{n+nf}{length}\PY{p}{(}\PY{n+nf}{unique}\PY{p}{(}\PY{n}{likelihood\PYZus{}df}\PY{o}{\PYZdl{}}\PY{n}{sigma\PYZus{}eta2}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Reshape log\PYZhy{}likelihood data}
+  \PY{n}{x} \PY{o}{=} \PY{n+nf}{unique}\PY{p}{(}\PY{n}{likelihood\PYZus{}df}\PY{o}{\PYZdl{}}\PY{n}{sigma\PYZus{}epsilon2}\PY{p}{)}\PY{p}{,}
+  \PY{n}{y} \PY{o}{=} \PY{n+nf}{unique}\PY{p}{(}\PY{n}{likelihood\PYZus{}df}\PY{o}{\PYZdl{}}\PY{n}{sigma\PYZus{}eta2}\PY{p}{)}\PY{p}{,}     
+  \PY{n}{z} \PY{o}{=} \PY{n}{likelihood\PYZus{}matrix}\PY{p}{,} 
   \PY{n}{type} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{surface\PYZdq{}}\PY{p}{,}
-  \PY{n}{colorscale} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Inferno\PYZdq{}}  \PY{c+c1}{\PYZsh{} Makes high values vivid red}
+  \PY{n}{colorscale} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Inferno\PYZdq{}}
 \PY{p}{)}
 
 \PY{n}{fig} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{fig} \PY{o}{\PYZpc{}\PYZgt{}\PYZpc{}}
@@ -1315,7 +1388,7 @@ HTML widgets cannot be represented in plain text (need html)
     Heatmap:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{293}{\boxspacing}
+\prompt{In}{incolor}{434}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{likelihood\PYZus{}df}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{sigma\PYZus{}epsilon2}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{sigma\PYZus{}eta2}\PY{p}{,} \PY{n}{fill} \PY{o}{=} \PY{n}{logLik}\PY{p}{)}\PY{p}{)} \PY{o}{+}
   \PY{n+nf}{geom\PYZus{}tile}\PY{p}{(}\PY{p}{)} \PY{o}{+}
@@ -1335,25 +1408,10 @@ HTML widgets cannot be represented in plain text (need html)
 \end{tcolorbox}
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_126_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_133_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
-    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{296}{\boxspacing}
-\begin{Verbatim}[commandchars=\\\{\}]
-\PY{n}{jupyter} \PY{n}{nbconvert} \PY{o}{\PYZhy{}}\PY{o}{\PYZhy{}}\PY{n}{to} \PY{n}{pdf} \PY{n}{T2\PYZus{}Fk.pynb}
-\end{Verbatim}
-\end{tcolorbox}
-
-    \begin{Verbatim}[commandchars=\\\{\}, frame=single, framerule=2mm, rulecolor=\color{outerrorbackground}]
-Error in parse(text = input): <text>:1:9: unexpected symbol
-1: jupyter nbconvert
-            \^{}
-Traceback:
-
-    \end{Verbatim}
-
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
 \prompt{In}{incolor}{ }{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
