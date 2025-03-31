@@ -380,7 +380,7 @@
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{384}{\boxspacing}
+\prompt{In}{incolor}{18}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{options}\PY{p}{(}\PY{n}{repr.plot.width}\PY{o}{=}\PY{l+m}{20}\PY{p}{,} \PY{n}{repr.plot.height}\PY{o}{=}\PY{l+m}{10}\PY{p}{)}  \PY{c+c1}{\PYZsh{} Ajuste dos gráficos}
 \end{Verbatim}
@@ -389,7 +389,7 @@
     Instalando e carregando as bibliotecas utilizadas
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{385}{\boxspacing}
+\prompt{In}{incolor}{6}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{library}\PY{p}{(}\PY{n}{pacman}\PY{p}{)}
 \PY{n+nf}{p\PYZus{}load}\PY{p}{(}\PY{n}{ggplot2}\PY{p}{,}\PY{n}{forecast}\PY{p}{,}\PY{n}{dlm}\PY{p}{,}\PY{n}{numDeriv}\PY{p}{,}\PY{n}{plotly}\PY{p}{)}
@@ -1248,7 +1248,7 @@ hyperparâmetros:
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{422}{\boxspacing}
+\prompt{In}{incolor}{438}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{likelihood\PYZus{}matrix} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{outer}\PY{p}{(}\PY{n}{sigma\PYZus{}epsilon2\PYZus{}vals}\PY{p}{,} \PY{n}{sigma\PYZus{}eta2\PYZus{}vals}\PY{p}{,} 
                            \PY{n+nf}{Vectorize}\PY{p}{(}\PY{n+nf}{function}\PY{p}{(}\PY{n}{se}\PY{p}{,} \PY{n}{sw}\PY{p}{)} \PY{n+nf}{logLik\PYZus{}mnl}\PY{p}{(}\PY{n+nf}{c}\PY{p}{(}\PY{n}{se}\PY{p}{,} \PY{n}{sw}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{p}{)}
@@ -1256,7 +1256,7 @@ hyperparâmetros:
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{423}{\boxspacing}
+\prompt{In}{incolor}{439}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{dim}\PY{p}{(}\PY{n}{likelihood\PYZus{}matrix}\PY{p}{)}
 \end{Verbatim}
@@ -1272,7 +1272,7 @@ hyperparâmetros:
     transformando em um df para usar o ggplot2
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{426}{\boxspacing}
+\prompt{In}{incolor}{440}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{expand.grid}\PY{p}{(}\PY{n+nf}{c}\PY{p}{(}\PY{l+m}{1}\PY{p}{,}\PY{l+m}{2}\PY{p}{)}\PY{p}{,}\PY{n+nf}{c}\PY{p}{(}\PY{l+m}{10}\PY{p}{,}\PY{l+m}{20}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
@@ -1292,7 +1292,7 @@ hyperparâmetros:
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{427}{\boxspacing}
+\prompt{In}{incolor}{441}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{likelihood\PYZus{}df} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{expand.grid}\PY{p}{(}\PY{n}{sigma\PYZus{}epsilon2} \PY{o}{=} \PY{n}{sigma\PYZus{}epsilon2\PYZus{}vals}\PY{p}{,} 
                              \PY{n}{sigma\PYZus{}eta2} \PY{o}{=} \PY{n}{sigma\PYZus{}eta2\PYZus{}vals}\PY{p}{)}
@@ -1302,7 +1302,7 @@ hyperparâmetros:
     adicionando a verossimilhança no df
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{428}{\boxspacing}
+\prompt{In}{incolor}{442}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{likelihood\PYZus{}df}\PY{o}{\PYZdl{}}\PY{n}{logLik} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.vector}\PY{p}{(}\PY{n}{likelihood\PYZus{}matrix}\PY{p}{)}
 \end{Verbatim}
@@ -1313,7 +1313,7 @@ hyperparâmetros:
     pacote:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{429}{\boxspacing}
+\prompt{In}{incolor}{443}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated sigma\PYZca{}2\PYZus{}epsilon:\PYZdq{}}\PY{p}{,} \PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{par}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
 \PY{n+nf}{cat}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated sigma\PYZca{}2\PYZus{}eta:\PYZdq{}}\PY{p}{,} \PY{n}{fit}\PY{o}{\PYZdl{}}\PY{n}{par}\PY{p}{[}\PY{l+m}{2}\PY{p}{]}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}n\PYZdq{}}\PY{p}{)}
@@ -1328,7 +1328,7 @@ Estimated sigma\^{}2\_eta: 0.5647697
     manual:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{430}{\boxspacing}
+\prompt{In}{incolor}{444}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{mle\PYZus{}estimates} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{likelihood\PYZus{}df} \PY{o}{\PYZpc{}\PYZgt{}\PYZpc{}}
   \PY{n+nf}{filter}\PY{p}{(}\PY{n}{logLik} \PY{o}{==} \PY{n+nf}{max}\PY{p}{(}\PY{n}{logLik}\PY{p}{)}\PY{p}{)} \PY{o}{\PYZpc{}\PYZgt{}\PYZpc{}}
@@ -1347,14 +1347,14 @@ Estimated sigma\^{}2\_eta: 0.5727273
     \end{Verbatim}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{432}{\boxspacing}
+\prompt{In}{incolor}{445}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{o}{?}\PY{n}{plot\PYZus{}ly}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{436}{\boxspacing}
+\prompt{In}{incolor}{446}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fig} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{plot\PYZus{}ly}\PY{p}{(}
   \PY{n}{x} \PY{o}{=} \PY{n+nf}{unique}\PY{p}{(}\PY{n}{likelihood\PYZus{}df}\PY{o}{\PYZdl{}}\PY{n}{sigma\PYZus{}epsilon2}\PY{p}{)}\PY{p}{,}
@@ -1412,13 +1412,277 @@ HTML widgets cannot be represented in plain text (need html)
     \end{center}
     { \hspace*{\fill} \\}
     
-    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{ }{\boxspacing}
-\begin{Verbatim}[commandchars=\\\{\}]
+    \section{exercícios}\label{exercuxedcios}
 
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  estime o modelo de nível Local utilizando a base de dados Nile (
+  usando StructTS e DLM) e faça o gráficos usando ggplot2.
+\end{enumerate}
+
+    Usando o structTS
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{160}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{fitNile} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{StructTS}\PY{p}{(}\PY{n}{Nile}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{level\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{161}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}\PY{n}{Nile\PYZus{}obs} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{Nile}\PY{p}{,}\PY{n}{time}\PY{o}{=}\PY{n+nf}{seq}\PY{p}{(}\PY{l+m}{1}\PY{o}{:}\PY{n+nf}{length}\PY{p}{(}\PY{n}{fitNile}\PY{o}{\PYZdl{}}\PY{n}{fitted}\PY{p}{)}\PY{p}{)}\PY{p}{,}\PY{n}{estimated\PYZus{}level}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{fitted}\PY{p}{(}\PY{n}{fitNile}\PY{p}{)}\PY{p}{,}\PY{n}{smoothed}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{tsSmooth}\PY{p}{(}\PY{n}{fitNile}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{162}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{h}\PY{o}{=}\PY{l+m}{10}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{163}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{forecast\PYZus{}obj} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{forecast}\PY{p}{(}\PY{n}{fitNile}\PY{p}{,} \PY{n}{h} \PY{o}{=} \PY{n}{h}\PY{p}{,} \PY{n}{level} \PY{o}{=} \PY{l+m}{90}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{164}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb+bp}{T}\PY{o}{=}\PY{n+nf}{length}\PY{p}{(}\PY{n}{fitNile}\PY{o}{\PYZdl{}}\PY{n}{fitted}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{165}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df\PYZus{}pred}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{data.frame}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{prev\PYZsq{}}\PY{o}{=}\PY{n}{forecast\PYZus{}obj}\PY{o}{\PYZdl{}}\PY{n}{mean}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{lower\PYZsq{}}\PY{o}{=}\PY{n}{forecast\PYZus{}obj}\PY{o}{\PYZdl{}}\PY{n}{lower}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{upper\PYZsq{}}\PY{o}{=}\PY{n}{forecast\PYZus{}obj}\PY{o}{\PYZdl{}}\PY{n}{upper}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{time\PYZsq{}}\PY{o}{=}\PY{p}{(}\PY{n+nb+bp}{T}\PY{l+m}{+1}\PY{p}{)}\PY{o}{:}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{+}\PY{n}{h}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{166}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nf}{colnames}\PY{p}{(}\PY{n}{df\PYZus{}pred}\PY{p}{)}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{prev\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{lower\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{upper\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{time\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{167}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nf}{ggplot}\PY{p}{(}\PY{p}{)} \PY{o}{+} 
+\PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data}\PY{o}{=}\PY{n}{df}\PY{p}{,}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{Nile\PYZus{}obs}\PY{p}{,}\PY{n}{x} \PY{o}{=} \PY{n}{time}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Observed\PYZdq{}}\PY{p}{)}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{1}\PY{p}{)} \PY{o}{+}
+\PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data}\PY{o}{=}\PY{n}{df}\PY{p}{,}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{smoothed}\PY{p}{,}\PY{n}{x} \PY{o}{=} \PY{n}{time}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Smoothed\PYZdq{}}\PY{p}{)}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{1}\PY{p}{)} \PY{o}{+}
+\PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data}\PY{o}{=}\PY{n}{df}\PY{p}{,}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{estimated\PYZus{}level}\PY{p}{,}\PY{n}{x} \PY{o}{=} \PY{n}{time}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated Level\PYZdq{}}\PY{p}{)}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{1}\PY{p}{)} \PY{o}{+}
+\PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{df\PYZus{}pred}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{time}\PY{p}{,} \PY{n}{y} \PY{o}{=}\PY{n}{prev}\PY{p}{)}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{green\PYZdq{}}\PY{p}{,} \PY{n}{size} \PY{o}{=} \PY{l+m}{1}\PY{p}{)} \PY{o}{+}
+\PY{n+nf}{geom\PYZus{}ribbon}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{df\PYZus{}pred}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{time}\PY{p}{,} \PY{n}{ymin} \PY{o}{=} \PY{n}{lower}\PY{p}{,} \PY{n}{ymax} \PY{o}{=} \PY{n}{upper}\PY{p}{)}\PY{p}{,} \PY{n}{fill} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{green\PYZdq{}}\PY{p}{,} \PY{n}{alpha} \PY{o}{=} \PY{l+m}{0.2}\PY{p}{)}\PY{o}{+}
+\PY{n+nf}{scale\PYZus{}color\PYZus{}manual}\PY{p}{(}\PY{n}{values} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Observed\PYZdq{}} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{Estimated Level\PYZdq{}} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{red\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{Smoothed\PYZsq{}}\PY{o}{=} \PY{l+s}{\PYZsq{}}\PY{l+s}{blue\PYZsq{}}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+\PY{n+nf}{labs}\PY{p}{(}
+\PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Observed Data vs. Estimated Level vs smoothed\PYZdq{}}\PY{p}{,}
+\PY{n}{x} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Time\PYZdq{}}\PY{p}{,}
+\PY{n}{y} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Value\PYZdq{}}\PY{p}{,}
+\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Legend\PYZdq{}}
+\PY{p}{)} \PY{o}{+}
+  
+\PY{n+nf}{theme\PYZus{}minimal}\PY{p}{(}\PY{p}{)}\PY{o}{+}
+
+\PY{n+nf}{theme}\PY{p}{(}
+    \PY{n}{panel.grid.major} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{gray\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{1}\PY{p}{)}\PY{p}{,}
+    \PY{n}{panel.grid.minor} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{lightgray\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{0.5}\PY{p}{)}\PY{p}{,}
+    \PY{n}{axis.line} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{1}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Make axis lines thicker and black}
+    \PY{n}{axis.ticks} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{0.8}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Make ticks more visible}
+    \PY{n}{axis.text} \PY{o}{=} \PY{n+nf}{element\PYZus{}text}\PY{p}{(}\PY{n}{size} \PY{o}{=} \PY{l+m}{12}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Adjust axis text size and color}
+    \PY{n}{axis.title} \PY{o}{=} \PY{n+nf}{element\PYZus{}text}\PY{p}{(}\PY{n}{size} \PY{o}{=} \PY{l+m}{14}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{)}  \PY{c+c1}{\PYZsh{} Adjust axis title size and color}
+    \PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Don't know how to automatically pick scale for object of type
+\textcolor{ansi-blue}{<ts>}. Defaulting to continuous.
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_144_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{168}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nf}{print}\PY{p}{(}\PY{n}{fitNile}\PY{o}{\PYZdl{}}\PY{n}{coef}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+    level   epsilon
+ 1469.147 15098.577
+    \end{Verbatim}
+
+    agora usando o pacote dlm
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{203}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{build\PYZus{}states} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{theta}\PY{p}{)} \PY{p}{\PYZob{}}
+    \PY{n+nf}{dlmModPoly}\PY{p}{(}\PY{n}{order} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{dV} \PY{o}{=} \PY{n}{theta}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{p}{,} \PY{n}{dW} \PY{o}{=} \PY{n}{theta}\PY{p}{[}\PY{l+m}{2}\PY{p}{]}\PY{p}{)}
+\PY{p}{\PYZcb{}}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{204}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{fitNile} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{dlmMLE}\PY{p}{(}\PY{n}{Nile}\PY{p}{,} \PY{n}{parm} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+m}{100}\PY{p}{,} \PY{l+m}{2}\PY{p}{)}\PY{p}{,} \PY{n}{build\PYZus{}states}\PY{p}{,} \PY{n}{lower} \PY{o}{=} \PY{n+nf}{rep}\PY{p}{(}\PY{l+m}{1e\PYZhy{}4}\PY{p}{,} \PY{l+m}{2}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{205}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{mod\PYZus{}Nile} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{build\PYZus{}states}\PY{p}{(}\PY{n}{fitNile}\PY{o}{\PYZdl{}}\PY{n}{par}\PY{p}{)}
+\PY{n+nf}{drop}\PY{p}{(}\PY{n+nf}{V}\PY{p}{(}\PY{n}{mod\PYZus{}Nile}\PY{p}{)}\PY{p}{)}
+\PY{n+nf}{drop}\PY{p}{(}\PY{n+nf}{W}\PY{p}{(}\PY{n}{mod\PYZus{}Nile}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    15099.7867214723
+
+    
+    1468.43775833941
+
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{206}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{smooth\PYZus{}Nile} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{dlmSmooth}\PY{p}{(}\PY{n}{Nile}\PY{p}{,} \PY{n}{mod\PYZus{}Nile}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{207}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{fore\PYZus{}Nile} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{dlmForecast}\PY{p}{(}\PY{n}{filter\PYZus{}Nile}\PY{p}{,} \PY{n}{nAhead} \PY{o}{=} \PY{l+m}{10}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{226}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{n}{fore\PYZus{}Nile}\PY{o}{\PYZdl{}}\PY{n}{f}\PY{p}{)}
+\PY{n}{Q} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{n}{fore\PYZus{}Nile}\PY{o}{\PYZdl{}}\PY{n}{Q}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{230}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{hwidth} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{qnorm}\PY{p}{(}\PY{l+m}{0.1}\PY{p}{,} \PY{n}{lower} \PY{o}{=} \PY{k+kc}{FALSE}\PY{p}{)} \PY{o}{*} \PY{n+nf}{sqrt}\PY{p}{(}\PY{n+nf}{unlist}\PY{p}{(}\PY{n}{Q}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{231}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{lower} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{f} \PY{o}{\PYZhy{}} \PY{n}{hwidth}
+\PY{n}{upper} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{f} \PY{o}{+} \PY{n}{hwidth}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{238}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nf}{as.numeric}\PY{p}{(}\PY{p}{(}\PY{n+nf}{length}\PY{p}{(}\PY{n}{Nile}\PY{p}{)} \PY{o}{+} \PY{l+m}{1}\PY{p}{)}\PY{o}{:}\PY{p}{(}\PY{n+nf}{length}\PY{p}{(}\PY{n}{Nile}\PY{p}{)} \PY{o}{+} \PY{l+m}{10}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{enumerate*}
+\item 101
+\item 102
+\item 103
+\item 104
+\item 105
+\item 106
+\item 107
+\item 108
+\item 109
+\item 110
+\end{enumerate*}
+
+
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{241}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df\PYZus{}forecast} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}
+  \PY{n}{Time} \PY{o}{=} \PY{p}{(}\PY{n+nf}{length}\PY{p}{(}\PY{n}{Nile}\PY{p}{)} \PY{o}{+} \PY{l+m}{1}\PY{p}{)}\PY{o}{:}\PY{p}{(}\PY{n+nf}{length}\PY{p}{(}\PY{n}{Nile}\PY{p}{)} \PY{o}{+} \PY{l+m}{10}\PY{p}{)}\PY{p}{,}
+  \PY{n}{Forecasted} \PY{o}{=} \PY{n}{f}\PY{p}{,}
+  \PY{n}{Lower} \PY{o}{=} \PY{n}{lower}\PY{p}{,}
+  \PY{n}{Upper} \PY{o}{=} \PY{n}{upper}
+\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{243}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}\PY{n}{time}\PY{o}{=}\PY{n+nf}{time}\PY{p}{(}\PY{n}{smooth\PYZus{}Nile}\PY{o}{\PYZdl{}}\PY{n}{s}\PY{p}{)}\PY{p}{,}\PY{n}{smoothed}\PY{o}{=}\PY{n}{smooth\PYZus{}Nile}\PY{o}{\PYZdl{}}\PY{n}{s}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{248}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{df\PYZus{}forecast}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{Time}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+  \PY{c+c1}{\PYZsh{} Adiciona as previsões como uma linha vermelha}
+  \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{Forecasted}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Forecasted\PYZdq{}}\PY{p}{)}\PY{p}{,} \PY{n}{size} \PY{o}{=} \PY{l+m}{1}\PY{p}{)} \PY{o}{+}
+  
+  \PY{c+c1}{\PYZsh{} Adiciona as bandas de previsão (intervalo de 50\PYZpc{})}
+  \PY{n+nf}{geom\PYZus{}ribbon}\PY{p}{(}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{ymin} \PY{o}{=} \PY{n}{Lower}\PY{p}{,} \PY{n}{ymax} \PY{o}{=} \PY{n}{Upper}\PY{p}{)}\PY{p}{,} \PY{n}{fill} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{red\PYZdq{}}\PY{p}{,} \PY{n}{alpha} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{)} \PY{o}{+}
+  
+  \PY{c+c1}{\PYZsh{} Adiciona as observações reais da série (y\PYZus{}mnl)}
+  \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n+nf}{data.frame}\PY{p}{(}\PY{n}{Time} \PY{o}{=} \PY{l+m}{1}\PY{o}{:}\PY{n+nf}{length}\PY{p}{(}\PY{n}{Nile}\PY{p}{)}\PY{p}{,} \PY{n}{Observed} \PY{o}{=} \PY{n}{Nile}\PY{p}{)}\PY{p}{,}
+            \PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{Observed}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Observed\PYZdq{}}\PY{p}{)}\PY{p}{,} \PY{n}{size} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{linetype} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{solid\PYZdq{}}\PY{p}{)} \PY{o}{+}
+  
+  \PY{c+c1}{\PYZsh{} Adiciona a linha de suavização (suavizado)}
+  \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n+nf}{data.frame}\PY{p}{(}\PY{n}{Time} \PY{o}{=} \PY{l+m}{1}\PY{o}{:}\PY{n+nf}{length}\PY{p}{(}\PY{n}{smooth\PYZus{}mnl}\PY{o}{\PYZdl{}}\PY{n}{s}\PY{p}{[}\PY{l+m}{\PYZhy{}1}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{Smoothed} \PY{o}{=} \PY{n}{smooth\PYZus{}mnl}\PY{o}{\PYZdl{}}\PY{n}{s}\PY{p}{[}\PY{l+m}{\PYZhy{}1}\PY{p}{]}\PY{p}{)}\PY{p}{,}
+            \PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{Smoothed}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Smoothed\PYZdq{}}\PY{p}{)}\PY{p}{,} \PY{n}{size} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{linetype} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{dashed\PYZdq{}}\PY{p}{)} \PY{o}{+}
+  
+  \PY{c+c1}{\PYZsh{} Personalizando os eixos e título}
+  \PY{n+nf}{labs}\PY{p}{(}
+    \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Forecasted Values with Prediction Intervals\PYZdq{}}\PY{p}{,}
+    \PY{n}{x} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Time\PYZdq{}}\PY{p}{,}
+    \PY{n}{y} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Level\PYZdq{}}\PY{p}{,}
+    \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Legend\PYZdq{}}
+  \PY{p}{)} \PY{o}{+}
+  
+  \PY{c+c1}{\PYZsh{} Customizando a paleta de cores}
+  \PY{n+nf}{scale\PYZus{}color\PYZus{}manual}\PY{p}{(}\PY{n}{values} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Forecasted\PYZdq{}} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{red\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{Observed\PYZdq{}} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{Smoothed\PYZdq{}} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{blue\PYZdq{}}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+  
+  \PY{c+c1}{\PYZsh{} Tema minimalista}
+  \PY{n+nf}{theme\PYZus{}minimal}\PY{p}{(}\PY{p}{)} \PY{o}{+}
+    \PY{n+nf}{theme}\PY{p}{(}
+    \PY{n}{panel.grid.major} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{gray\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{1}\PY{p}{)}\PY{p}{,}
+    \PY{n}{panel.grid.minor} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{lightgray\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{0.5}\PY{p}{)}\PY{p}{,}
+    \PY{n}{axis.line} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{1}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Make axis lines thicker and black}
+    \PY{n}{axis.ticks} \PY{o}{=} \PY{n+nf}{element\PYZus{}line}\PY{p}{(}\PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{,} \PY{n}{linewidth} \PY{o}{=} \PY{l+m}{0.8}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Make ticks more visible}
+    \PY{n}{axis.text} \PY{o}{=} \PY{n+nf}{element\PYZus{}text}\PY{p}{(}\PY{n}{size} \PY{o}{=} \PY{l+m}{12}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Adjust axis text size and color}
+    \PY{n}{axis.title} \PY{o}{=} \PY{n+nf}{element\PYZus{}text}\PY{p}{(}\PY{n}{size} \PY{o}{=} \PY{l+m}{14}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{black\PYZdq{}}\PY{p}{)}\PY{p}{,}  \PY{c+c1}{\PYZsh{} Adjust axis title size and color}
+    \PY{n}{legend.position} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{top\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{T2_FK_files/T2_FK_158_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
 
     % Add a bibliography block to the postdoc
     
