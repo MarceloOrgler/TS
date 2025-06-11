@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  10 JUN 2025 09:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  11 JUN 2025 15:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -822,8 +822,7 @@ dftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box89
-)
-No file Trabalho6.aux.
+) (Trabalho6.aux)
 \openout1 = `Trabalho6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 375.
@@ -918,6 +917,8 @@ Package caption Info: End \AtBeginDocument code.
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 Package hyperref Info: Link coloring ON on input line 375.
+
+(Trabalho6.out) (Trabalho6.out)
 \@outlinefile=\write5
 \openout5 = `Trabalho6.out'.
 
@@ -998,7 +999,7 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 
 {C:/Users/Marcelo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Ma
 rcelo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2]
-<Trabalho6_files/Trabalho6_25_0.png, id=23, 505.89pt x 505.89pt>
+<Trabalho6_files/Trabalho6_25_0.png, id=45, 505.89pt x 505.89pt>
 File: Trabalho6_files/Trabalho6_25_0.png Graphic file (type png)
 <use Trabalho6_files/Trabalho6_25_0.png>
 Package pdftex.def Info: Trabalho6_files/Trabalho6_25_0.png  used on input line
@@ -1013,41 +1014,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 605--606
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 609.
 
-[3 <./Trabalho6_files/Trabalho6_25_0.png>]
-Overfull \hbox (214.41461pt too wide) in paragraph at lines 681--681
-[][]\T1/cmtt/m/n/10.95 return[]([]list[]([]\TS1/cmtt/m/n/10.95 '[][]\T1/cmtt/m/
-n/10.95 theta_estimado\TS1/cmtt/m/n/10.95 '[][]\T1/cmtt/m/n/10.95 =[]theta_esti
-mado,[]\TS1/cmtt/m/n/10.95 '[][]\T1/cmtt/m/n/10.95 mean_theta_bootstrap\TS1/cmt
-t/m/n/10.95 '[][]\T1/cmtt/m/n/10.95 =[]mean_theta_bootstrap,[]\TS1/cmtt/m/n/10.
-95 '[][]\T1/cmtt/m/n/10.95 IC_bootstrap\TS1/cmtt/m/n/10.95 '[][]\T1/cmtt/m/n/10
-.95 =[]IC_bootstrap))|  
- []
-
-[4] [5] [6] [7]
-<Trabalho6_files/Trabalho6_49_0.png, id=54, 505.89pt x 505.89pt>
+[3 <./Trabalho6_files/Trabalho6_25_0.png>] [4] [5] [6] [7]
+<Trabalho6_files/Trabalho6_49_0.png, id=74, 505.89pt x 505.89pt>
 File: Trabalho6_files/Trabalho6_49_0.png Graphic file (type png)
 <use Trabalho6_files/Trabalho6_49_0.png>
 Package pdftex.def Info: Trabalho6_files/Trabalho6_49_0.png  used on input line
- 927.
+ 961.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 929--930
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 963--964
 
  []
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 933.
+(hyperref)                than one, level fixed on input line 967.
 
 
-Overfull \hbox (191.78113pt too wide) in paragraph at lines 960--960
+Overfull \hbox (191.78113pt too wide) in paragraph at lines 994--994
 []\T1/cmtt/m/n/10.95 Theta_bootstrap[]<-[][]bootstrap_n_parametrico[](e_boot[]=
 []e_boot,B[]=[][]20[],mu_init[]=[]Amostra_original[]$[]mu,y[]=[]Amostra_origina
 l[]$[]y,X[]=[]X)|  
  []
 
 
-Overfull \hbox (214.41461pt too wide) in paragraph at lines 966--966
+Overfull \hbox (214.41461pt too wide) in paragraph at lines 1000--1000
 [][]\T1/cmtt/m/n/10.95 return[]([]list[]([]\TS1/cmtt/m/n/10.95 '[][]\T1/cmtt/m/
 n/10.95 theta_estimado\TS1/cmtt/m/n/10.95 '[][]\T1/cmtt/m/n/10.95 =[]theta_esti
 mado,[]\TS1/cmtt/m/n/10.95 '[][]\T1/cmtt/m/n/10.95 mean_theta_bootstrap\TS1/cmt
@@ -1056,33 +1047,23 @@ t/m/n/10.95 '[][]\T1/cmtt/m/n/10.95 =[]mean_theta_bootstrap,[]\TS1/cmtt/m/n/10.
 .95 =[]IC_bootstrap))|  
  []
 
-[8 <./Trabalho6_files/Trabalho6_49_0.png>] [9] [10] [11] [12] [13]
+[9 <./Trabalho6_files/Trabalho6_49_0.png>] [10] [11] [12] [13] [14]
 (Trabalho6.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Trabalho6.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Trabalho6.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  CF875FB144648C1EAB1BEA1A58EB50AB;753.
+Package rerunfilecheck Info: File `Trabalho6.out' has not changed.
+(rerunfilecheck)             Checksum: CF875FB144648C1EAB1BEA1A58EB50AB;753.
  ) 
 Here is how much of TeX's memory you used:
- 25181 strings out of 474486
- 470982 string characters out of 5742811
- 1991542 words of memory out of 5000000
- 46976 multiletter control sequences out of 15000+600000
+ 25196 strings out of 474486
+ 471407 string characters out of 5742811
+ 2001542 words of memory out of 5000000
+ 46984 multiletter control sequences out of 15000+600000
  584522 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,7n,107p,504b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,7n,107p,504b,748s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Marcelo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
 it1095.pk> <C:\Users\Marcelo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
 pi600\tctt1095.pk> <C:\Users\Marcelo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
@@ -1091,9 +1072,9 @@ pen/ec/dpi600\ectt1095.pk><C:/Users/Marcelo/AppData/Local/Programs/MiKTeX/fonts
 iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marcelo/AppData/Local
 /Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Marcelo/AppData/
 Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Trabalho6.pdf (13 pages, 156112 bytes).
+Output written on Trabalho6.pdf (14 pages, 160665 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 264 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
