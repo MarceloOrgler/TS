@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  12 JUN 2025 15:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  12 JUN 2025 17:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1063,23 +1063,19 @@ e_boot,B[]=[][]20[],mu_init[]=[]Amostra_original[]$[]mu,y[]=[]Amostra_original[
 ]$[]y,X[]=[]X)|  
  []
 
-[14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] (Trabalho6.aux)
+[14] [15] [16] [17] [18] [19] [20] (Trabalho6.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `Trabalho6.out' has not changed.
 (rerunfilecheck)             Checksum: CF875FB144648C1EAB1BEA1A58EB50AB;753.
  ) 
 Here is how much of TeX's memory you used:
- 25551 strings out of 474486
- 474138 string characters out of 5742811
+ 25329 strings out of 474486
+ 472405 string characters out of 5742811
  2006542 words of memory out of 5000000
- 46987 multiletter control sequences out of 15000+600000
+ 46989 multiletter control sequences out of 15000+600000
  584522 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,7n,107p,504b,748s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1091,9 +1087,9 @@ pen/ec/dpi600\ectt1095.pk><C:/Users/Marcelo/AppData/Local/Programs/MiKTeX/fonts
 iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marcelo/AppData/Local
 /Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Marcelo/AppData/
 Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Trabalho6.pdf (24 pages, 223000 bytes).
+Output written on Trabalho6.pdf (20 pages, 192524 bytes).
 PDF statistics:
- 714 PDF objects out of 1000 (max. 8388607)
- 395 named destinations out of 1000 (max. 500000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 171 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -403,7 +403,7 @@
     Criando a função que simula o processo:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{3}{\boxspacing}
+\prompt{In}{incolor}{8}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{simulate\PYZus{}glarma} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n+nb+bp}{T} \PY{o}{=} \PY{l+m}{100}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{,} \PY{n}{x} \PY{o}{=} \PY{k+kc}{NULL}\PY{p}{)} \PY{p}{\PYZob{}}
   \PY{n+nf}{if }\PY{p}{(}\PY{n+nf}{is.null}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)} \PY{n}{x} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{rep}\PY{p}{(}\PY{l+m}{1}\PY{p}{,} \PY{n+nb+bp}{T}\PY{p}{)}
@@ -555,7 +555,7 @@ se a minha ideia do bootstrap está funcionando.
 amostra:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{23}{\boxspacing}
+\prompt{In}{incolor}{2}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{recupera\PYZus{}par} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{Y\PYZus{}col}\PY{p}{,}\PY{n}{X}\PY{p}{)} \PY{p}{\PYZob{}}
   \PY{n}{fit} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{tryCatch}\PY{p}{(}\PY{p}{\PYZob{}}
@@ -656,7 +656,7 @@ Beta\_bootstrap e Theta\_bootstrap e seus intervalos de confiança.
 Finalmente, ela também retorna a Amostra original.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{31}{\boxspacing}
+\prompt{In}{incolor}{3}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{bootstrap\PYZus{}parametrico} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{B}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{n}{beta}\PY{o}{=}\PY{l+m}{1}\PY{p}{,}\PY{n}{theta}\PY{o}{=}\PY{l+m}{0.3}\PY{p}{)}
 
@@ -893,7 +893,7 @@ entre o theta verdadeiro e a média do theta\_bootstrap)
 Raciocínio análago para o beta.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{38}{\boxspacing}
+\prompt{In}{incolor}{4}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{Questao1} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{B} \PY{o}{=} \PY{l+m}{20}\PY{p}{,} \PY{n+nb+bp}{T} \PY{o}{=} \PY{l+m}{100}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{,} \PY{n}{R} \PY{o}{=} \PY{l+m}{2}\PY{p}{)} \PY{p}{\PYZob{}}
   
@@ -1551,7 +1551,7 @@ experimento Monte Carlo para o código ficar completo:
     criando a funçao que faz previsões no modelo glarma:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{64}{\boxspacing}
+\prompt{In}{incolor}{5}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{prev\PYZus{}glarma} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{beta}\PY{p}{,} \PY{n}{theta}\PY{p}{,} \PY{n}{seed} \PY{o}{=} \PY{k+kc}{NULL}\PY{p}{)} \PY{p}{\PYZob{}}
 
@@ -1594,7 +1594,7 @@ experimento Monte Carlo para o código ficar completo:
 bootstrap paramétrico já apresentado.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{69}{\boxspacing}
+\prompt{In}{incolor}{42}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{intervalo\PYZus{}preditivo\PYZus{}bootstrap} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{n}{B}\PY{o}{=}\PY{l+m}{100}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{,}\PY{n}{R}\PY{o}{=}\PY{l+m}{2}\PY{p}{)}\PY{p}{\PYZob{}}
     
@@ -1613,7 +1613,7 @@ bootstrap paramétrico já apresentado.
     \PY{n}{beta\PYZus{}boot}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{numeric}\PY{p}{(}\PY{n}{B}\PY{p}{)}
     \PY{n}{theta\PYZus{}boot}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{numeric}\PY{p}{(}\PY{n}{B}\PY{p}{)}
         
-    \PY{n}{boot} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{bootstrap\PYZus{}parametrico}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{n}{B}\PY{o}{=}\PY{l+m}{20}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{)}
+    \PY{n}{boot} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{bootstrap\PYZus{}parametrico}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{n+nb+bp}{T}\PY{p}{,}\PY{n}{B}\PY{o}{=}\PY{n}{B}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{)}
     
     \PY{n}{Y} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{boot}\PY{o}{\PYZdl{}}\PY{n}{Amostra\PYZus{}original}
     \PY{n}{Y\PYZus{}train} \PY{o}{=} \PY{n}{Y}\PY{p}{[}\PY{l+m}{1}\PY{o}{:}\PY{p}{(}\PY{n+nb+bp}{T}\PY{l+m}{\PYZhy{}1}\PY{p}{)}\PY{p}{]}
@@ -1629,7 +1629,9 @@ bootstrap paramétrico já apresentado.
         \PY{p}{\PYZcb{}}
         
     \PY{n}{mean\PYZus{}Y\PYZus{}pred}\PY{p}{[}\PY{n}{r}\PY{p}{]}\PY{o}{=}\PY{n+nf}{mean}\PY{p}{(}\PY{n}{Y\PYZus{}pred}\PY{p}{,}\PY{n}{na.rm}\PY{o}{=}\PY{k+kc}{TRUE}\PY{p}{)}
-    \PY{n}{IC\PYZus{}pred}\PY{p}{[[}\PY{n}{r}\PY{p}{]]}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{quantile}\PY{p}{(}\PY{n}{mean\PYZus{}Y\PYZus{}pred}\PY{p}{,}\PY{n}{probs} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+m}{0.025}\PY{p}{,} \PY{l+m}{0.975}\PY{p}{)}\PY{p}{)}
+    \PY{n}{IC\PYZus{}pred}\PY{p}{[[}\PY{n}{r}\PY{p}{]]}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{quantile}\PY{p}{(}\PY{n}{Y\PYZus{}pred}\PY{p}{,}\PY{n}{probs} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+m}{0.025}\PY{p}{,} \PY{l+m}{0.975}\PY{p}{)}\PY{p}{,}\PY{n}{na.rm}\PY{o}{=}\PY{k+kc}{TRUE}\PY{p}{)}
+    \PY{n}{IC\PYZus{}pred}\PY{p}{[[}\PY{n}{r}\PY{p}{]]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n+nf}{floor}\PY{p}{(}\PY{n}{IC\PYZus{}pred}\PY{p}{[[}\PY{n}{r}\PY{p}{]]}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n+nf}{ceiling}\PY{p}{(}\PY{n}{IC\PYZus{}pred}\PY{p}{[[}\PY{n}{r}\PY{p}{]]}\PY{p}{[}\PY{l+m}{2}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+
     \PY{n}{Y\PYZus{}teste}\PY{p}{[}\PY{n}{r}\PY{p}{]}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n}{Y\PYZus{}test}
     \PY{p}{\PYZcb{}}
     
@@ -1638,103 +1640,28 @@ bootstrap paramétrico já apresentado.
 \end{Verbatim}
 \end{tcolorbox}
 
-    rodando a função com R=10 para verificar o output:
+    Eu arredondei os limites dos intervalos para o inteiro mais próximo,
+pois o Y\_test é inteiro.
 
-    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{71}{\boxspacing}
-\begin{Verbatim}[commandchars=\\\{\}]
-\PY{n+nf}{intervalo\PYZus{}preditivo\PYZus{}bootstrap}\PY{p}{(}\PY{n}{R}\PY{o}{=}\PY{l+m}{10}\PY{p}{,}\PY{n}{B}\PY{o}{=}\PY{l+m}{100}\PY{p}{)}
-\end{Verbatim}
-\end{tcolorbox}
-
-    \begin{description}
-\item[\$Y\_test] \begin{enumerate*}
-\item 2
-\item 2
-\item 2
-\item 3
-\item 7
-\item 3
-\item 0
-\item 1
-\item 1
-\item 4
-\end{enumerate*}
-
-\item[\$IC\_pred] \begin{enumerate}
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 1.6324996379393
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 2.19759296685041
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 2.21597746189282
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 2.53347829393443
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.45836002412046
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.73917218778078
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.73917218778078
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.73917218778078
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0.473951507788828
-\item[97.5\textbackslash{}\%] 3.73917218778078
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 2.11367830253043
-\item[97.5\textbackslash{}\%] 3.73917218778078
-\end{description*}
-
-\end{enumerate}
-
-\end{description}
-
-
-    
     conferindo\_IP verifica o percentual de intervalos que contém o
 Y\_teste:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{72}{\boxspacing}
+\prompt{In}{incolor}{38}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-\PY{n}{conferindo\PYZus{}IP} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{B} \PY{o}{=} \PY{l+m}{20}\PY{p}{,} \PY{n+nb+bp}{T} \PY{o}{=} \PY{l+m}{100}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{,} \PY{n}{R}\PY{o}{=}\PY{l+m}{2}\PY{p}{)} \PY{p}{\PYZob{}}
-  
-  \PY{n}{resultado} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{intervalo\PYZus{}preditivo\PYZus{}bootstrap}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{n+nb+bp}{T}\PY{p}{,}\PY{n}{B}\PY{o}{=}\PY{n}{B}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{n}{beta}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{n}{theta}\PY{p}{,}\PY{n}{R}\PY{o}{=}\PY{n}{R}\PY{p}{)}
-
-  \PY{n}{Y\PYZus{}test} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{resultado}\PY{o}{\PYZdl{}}\PY{n}{Y\PYZus{}test}
-  \PY{n}{IC\PYZus{}pred} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{resultado}\PY{o}{\PYZdl{}}\PY{n}{IC\PYZus{}pred}
+\PY{n}{conferindo\PYZus{}IP} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{B} \PY{o}{=} \PY{l+m}{100}\PY{p}{,} \PY{n+nb+bp}{T} \PY{o}{=} \PY{l+m}{100}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{,} \PY{n}{R}\PY{o}{=}\PY{l+m}{2}\PY{p}{)} \PY{p}{\PYZob{}}
   
   \PY{n}{dentro\PYZus{}do\PYZus{}intervalo} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{logical}\PY{p}{(}\PY{n}{R}\PY{p}{)}
+
+    \PY{n}{resultado} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{intervalo\PYZus{}preditivo\PYZus{}bootstrap}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{n+nb+bp}{T}\PY{p}{,}\PY{n}{B}\PY{o}{=}\PY{n}{B}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{n}{beta}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{n}{theta}\PY{p}{,}\PY{n}{R}\PY{o}{=}\PY{n}{R}\PY{p}{)}
+
+    \PY{n}{Y\PYZus{}test} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{resultado}\PY{o}{\PYZdl{}}\PY{n}{Y\PYZus{}test}
+    \PY{n}{IC\PYZus{}pred} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{resultado}\PY{o}{\PYZdl{}}\PY{n}{IC\PYZus{}pred}
   
   \PY{n+nf}{for }\PY{p}{(}\PY{n}{r} \PY{n}{in} \PY{l+m}{1}\PY{o}{:}\PY{n}{R}\PY{p}{)} \PY{p}{\PYZob{}}
+    
     \PY{n}{intervalo} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{IC\PYZus{}pred}\PY{p}{[[}\PY{n}{r}\PY{p}{]]}
+    
     \PY{n+nf}{if }\PY{p}{(}\PY{n+nf}{any}\PY{p}{(}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{intervalo}\PY{p}{)}\PY{p}{)}\PY{p}{)} \PY{p}{\PYZob{}}
       \PY{n}{dentro\PYZus{}do\PYZus{}intervalo}\PY{p}{[}\PY{n}{r}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{k+kc}{NA}
     \PY{p}{\PYZcb{}} \PY{n}{else} \PY{p}{\PYZob{}}
@@ -1745,7 +1672,6 @@ Y\_teste:
   \PY{n}{cobertura\PYZus{}percentual} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{mean}\PY{p}{(}\PY{n}{dentro\PYZus{}do\PYZus{}intervalo}\PY{p}{,}\PY{n}{na.rm} \PY{o}{=} \PY{k+kc}{TRUE}\PY{p}{)} \PY{o}{*} \PY{l+m}{100}
   
   \PY{n+nf}{return}\PY{p}{(}\PY{n+nf}{list}\PY{p}{(}
-    \PY{n}{Intervalos}\PY{o}{=}\PY{n}{resultado}\PY{p}{,}
     \PY{n}{total\PYZus{}dentro} \PY{o}{=} \PY{n+nf}{sum}\PY{p}{(}\PY{n}{dentro\PYZus{}do\PYZus{}intervalo}\PY{p}{,}\PY{n}{na.rm} \PY{o}{=} \PY{k+kc}{TRUE}\PY{p}{)}\PY{p}{,}
     \PY{n}{cobertura\PYZus{}percentual} \PY{o}{=} \PY{n}{cobertura\PYZus{}percentual}\PY{p}{,}    
     \PY{n}{total\PYZus{}R} \PY{o}{=} \PY{n+nf}{sum}\PY{p}{(}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{dentro\PYZus{}do\PYZus{}intervalo}\PY{p}{)}\PY{p}{)}    
@@ -1756,640 +1682,21 @@ Y\_teste:
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{73}{\boxspacing}
+\prompt{In}{incolor}{39}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-\PY{n+nf}{conferindo\PYZus{}IP}\PY{p}{(}\PY{n}{R}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{n}{B}\PY{o}{=}\PY{l+m}{100}\PY{p}{)}
+\PY{n+nf}{conferindo\PYZus{}IP}\PY{p}{(}\PY{n}{R}\PY{o}{=}\PY{l+m}{10}\PY{p}{,}\PY{n}{B}\PY{o}{=}\PY{l+m}{50}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
-    \begin{Verbatim}[commandchars=\\\{\}]
-GLARMA failed to converge: Fisher Scoring fails to converge from the initial
-estimates.
-
-GLARMA failed to converge: Fisher Scoring fails to converge from the initial
-estimates.
-
-    \end{Verbatim}
-
     \begin{description}
-\item[\$Intervalos] \begin{description}
-\item[\$Y\_test] \begin{enumerate*}
-\item 0
-\item 6
-\item 6
-\item 6
-\item 4
-\item 5
-\item 2
-\item 6
-\item 0
-\item 2
-\item 1
-\item 5
-\item 2
-\item 3
-\item 2
-\item 1
-\item 3
-\item 0
-\item 3
-\item 4
-\item 3
-\item 4
-\item 3
-\item 4
-\item 5
-\item 1
-\item 2
-\item 1
-\item 4
-\item 1
-\item 7
-\item 2
-\item 2
-\item 0
-\item 2
-\item 1
-\item 4
-\item 3
-\item 3
-\item 3
-\item 3
-\item 2
-\item 3
-\item 2
-\item 3
-\item 3
-\item 1
-\item 1
-\item 4
-\item 2
-\item 1
-\item 2
-\item 2
-\item 4
-\item 1
-\item 2
-\item 5
-\item 5
-\item 2
-\item 1
-\item 3
-\item 4
-\item 2
-\item 4
-\item 1
-\item 3
-\item 2
-\item 3
-\item 0
-\item 0
-\item 3
-\item 4
-\item 2
-\item 3
-\item 5
-\item 7
-\item 1
-\item 3
-\item 4
-\item 2
-\item 4
-\item 0
-\item 3
-\item 2
-\item 3
-\item 1
-\item 2
-\item 4
-\item 1
-\item 2
-\item 2
-\item 3
-\item 4
-\item 2
-\item 3
-\item 2
-\item 3
-\item 4
-\item 1
-\item 3
-\end{enumerate*}
-
-\item[\$IC\_pred] \begin{enumerate}
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 0
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 0
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 1.17995248110578
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 2.83391731500919
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.32480844463045
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.32480844463045
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.32480844463045
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.32480844463045
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.32480844463045
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.32480844463045
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.32480844463045
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.57523401356289
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.57523401356289
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.57523401356289
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.57523401356289
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.57523401356289
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.57523401356289
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.57523401356289
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 3.97385251849517
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.16139073582548
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.16139073582548
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.20333539811624
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.27833997345539
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.34559241471176
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.34559241471176
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.34559241471176
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.34559241471176
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.40105303455639
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.40105303455639
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.40105303455639
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.40105303455639
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.40105303455639
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.40105303455639
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.51340245746593
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.52549761765428
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.52549761765428
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.52549761765428
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0
-\item[97.5\textbackslash{}\%] 4.52549761765428
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 0.657865607622061
-\item[97.5\textbackslash{}\%] 4.52549761765428
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 1.42365517438767
-\item[97.5\textbackslash{}\%] 4.52549761765428
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 1.50103048029173
-\item[97.5\textbackslash{}\%] 4.52549761765428
-\end{description*}
-
-\item \begin{description*}
-\item[2.5\textbackslash{}\%] 1.63547183253908
-\item[97.5\textbackslash{}\%] 4.52549761765428
-\end{description*}
-
-\end{enumerate}
-
-\end{description}
-
-\item[\$total\_dentro] 86
-\item[\$cobertura\_percentual] 86
-\item[\$total\_R] 100
+\item[\$total\_dentro] 8
+\item[\$cobertura\_percentual] 80
+\item[\$total\_R] 10
 \end{description}
 
 
     
-    Das 100 previsões, apenas 86 estão no intervalo preditivo bootstrap.
-Pode ser falta de sorte ou há algo errado na minha previsão.
+    Nos 10 experimentos feitos, o Y\_teste está no intervalo 8 vezes.
 
 
     % Add a bibliography block to the postdoc
