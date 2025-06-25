@@ -403,17 +403,20 @@
     Criando a função que simula o processo:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{8}{\boxspacing}
+\prompt{In}{incolor}{55}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-\PY{n}{simulate\PYZus{}glarma} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n+nb+bp}{T} \PY{o}{=} \PY{l+m}{100}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{,} \PY{n}{x} \PY{o}{=} \PY{k+kc}{NULL}\PY{p}{)} \PY{p}{\PYZob{}}
-  \PY{n+nf}{if }\PY{p}{(}\PY{n+nf}{is.null}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)} \PY{n}{x} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{rep}\PY{p}{(}\PY{l+m}{1}\PY{p}{,} \PY{n+nb+bp}{T}\PY{p}{)}
+\PY{n}{simulate\PYZus{}glarma} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n+nb+bp}{T} \PY{o}{=} \PY{l+m}{100}\PY{p}{,} \PY{n}{burn\PYZus{}in}\PY{o}{=}\PY{l+m}{50}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{,} \PY{n}{x} \PY{o}{=} \PY{k+kc}{NULL}\PY{p}{)} \PY{p}{\PYZob{}}
+
+  \PY{n}{T\PYZus{}total} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nb+bp}{T} \PY{o}{+} \PY{n}{burn\PYZus{}in}
   
-  \PY{n}{z} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{numeric}\PY{p}{(}\PY{n+nb+bp}{T}\PY{p}{)}
-  \PY{n}{mu} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{numeric}\PY{p}{(}\PY{n+nb+bp}{T}\PY{p}{)}
-  \PY{n}{y} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{numeric}\PY{p}{(}\PY{n+nb+bp}{T}\PY{p}{)}
-  \PY{n}{e} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{numeric}\PY{p}{(}\PY{n+nb+bp}{T}\PY{p}{)}
+  \PY{n+nf}{if }\PY{p}{(}\PY{n+nf}{is.null}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)} \PY{n}{x} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{rep}\PY{p}{(}\PY{l+m}{1}\PY{p}{,} \PY{n}{T\PYZus{}total}\PY{p}{)}
   
-  \PY{n+nf}{for }\PY{p}{(}\PY{n}{t} \PY{n}{in} \PY{l+m}{1}\PY{o}{:}\PY{n+nb+bp}{T}\PY{p}{)} \PY{p}{\PYZob{}}
+  \PY{n}{z} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{numeric}\PY{p}{(}\PY{n}{T\PYZus{}total}\PY{p}{)}
+  \PY{n}{mu} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{numeric}\PY{p}{(}\PY{n}{T\PYZus{}total}\PY{p}{)}
+  \PY{n}{y} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{numeric}\PY{p}{(}\PY{n}{T\PYZus{}total}\PY{p}{)}
+  \PY{n}{e} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{numeric}\PY{p}{(}\PY{n}{T\PYZus{}total}\PY{p}{)}
+  
+  \PY{n+nf}{for }\PY{p}{(}\PY{n}{t} \PY{n}{in} \PY{l+m}{1}\PY{o}{:}\PY{n}{T\PYZus{}total}\PY{p}{)} \PY{p}{\PYZob{}}
     \PY{n}{z\PYZus{}t} \PY{o}{\PYZlt{}\PYZhy{}} \PY{l+m}{0}
     \PY{n+nf}{if }\PY{p}{(}\PY{n}{t} \PY{o}{\PYZgt{}} \PY{l+m}{1}\PY{p}{)} \PY{n}{z\PYZus{}t} \PY{o}{\PYZlt{}\PYZhy{}} \PY{o}{+} \PY{n}{e}\PY{p}{[}\PY{n}{t} \PY{o}{\PYZhy{}} \PY{l+m}{1}\PY{p}{]} \PY{o}{*} \PY{n}{theta}
     
@@ -424,7 +427,8 @@
     \PY{n}{z}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{z\PYZus{}t}
   \PY{p}{\PYZcb{}}
   
-  \PY{n+nf}{return}\PY{p}{(}\PY{n+nf}{data.frame}\PY{p}{(}\PY{n}{time} \PY{o}{=} \PY{l+m}{1}\PY{o}{:}\PY{n+nb+bp}{T}\PY{p}{,} \PY{n}{x} \PY{o}{=} \PY{n}{x}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{y}\PY{p}{,} \PY{n}{mu} \PY{o}{=} \PY{n}{mu}\PY{p}{,} \PY{n}{z} \PY{o}{=} \PY{n}{z}\PY{p}{,}\PY{n}{e}\PY{o}{=}\PY{n}{e}\PY{p}{)}\PY{p}{)}
+  \PY{n+nf}{return}\PY{p}{(}\PY{n+nf}{data.frame}\PY{p}{(}\PY{n}{time} \PY{o}{=} \PY{l+m}{1}\PY{o}{:}\PY{n+nb+bp}{T}\PY{p}{,} \PY{n}{x} \PY{o}{=} \PY{n}{x}\PY{p}{[}\PY{p}{(}\PY{n}{burn\PYZus{}in} \PY{o}{+} \PY{l+m}{1}\PY{p}{)}\PY{o}{:}\PY{n}{T\PYZus{}total}\PY{p}{]}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{y}\PY{p}{[}\PY{p}{(}\PY{n}{burn\PYZus{}in} \PY{o}{+} \PY{l+m}{1}\PY{p}{)}\PY{o}{:}\PY{n}{T\PYZus{}total}\PY{p}{]}\PY{p}{,}
+                    \PY{n}{mu} \PY{o}{=} \PY{n}{mu}\PY{p}{[}\PY{p}{(}\PY{n}{burn\PYZus{}in} \PY{o}{+} \PY{l+m}{1}\PY{p}{)}\PY{o}{:}\PY{n}{T\PYZus{}total}\PY{p}{]}\PY{p}{,} \PY{n}{z} \PY{o}{=} \PY{n}{z}\PY{p}{[}\PY{p}{(}\PY{n}{burn\PYZus{}in} \PY{o}{+} \PY{l+m}{1}\PY{p}{)}\PY{o}{:}\PY{n}{T\PYZus{}total}\PY{p}{]}\PY{p}{,}\PY{n}{e}\PY{o}{=}\PY{n}{e}\PY{p}{[}\PY{p}{(}\PY{n}{burn\PYZus{}in} \PY{o}{+} \PY{l+m}{1}\PY{p}{)}\PY{o}{:}\PY{n}{T\PYZus{}total}\PY{p}{]}\PY{p}{)}\PY{p}{)}
 \PY{p}{\PYZcb{}}
 \end{Verbatim}
 \end{tcolorbox}
@@ -432,14 +436,14 @@
     Vou conferir se a simulação está correta:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{4}{\boxspacing}
+\prompt{In}{incolor}{56}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{Amostra\PYZus{}original}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{simulate\PYZus{}glarma}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{n}{beta}\PY{o}{=}\PY{l+m}{1}\PY{p}{,}\PY{n}{theta}\PY{o}{=}\PY{l+m}{0.3}\PY{p}{,}\PY{n}{x}\PY{o}{=}\PY{k+kc}{NULL}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{5}{\boxspacing}
+\prompt{In}{incolor}{57}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{length}\PY{p}{(}\PY{n}{Amostra\PYZus{}original}\PY{o}{\PYZdl{}}\PY{n}{y}\PY{p}{)}
 \end{Verbatim}
@@ -449,7 +453,7 @@
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{6}{\boxspacing}
+\prompt{In}{incolor}{58}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{summary}\PY{p}{(}\PY{n}{Amostra\PYZus{}original}\PY{o}{\PYZdl{}}\PY{n}{y}\PY{p}{)}
 \end{Verbatim}
@@ -458,12 +462,12 @@
     
     \begin{Verbatim}[commandchars=\\\{\}]
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-   0.00    2.00    3.00    3.37    4.25   11.00 
+   0.00    1.00    3.00    2.60    3.25    8.00 
     \end{Verbatim}
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{7}{\boxspacing}
+\prompt{In}{incolor}{59}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{X} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{Amostra\PYZus{}original}\PY{o}{\PYZdl{}}\PY{n}{x}
 \PY{n}{X} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.matrix}\PY{p}{(}\PY{n}{X}\PY{p}{)}
@@ -472,32 +476,32 @@
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{8}{\boxspacing}
+\prompt{In}{incolor}{60}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{result}\PY{o}{=}\PY{n+nf}{glarma}\PY{p}{(}\PY{n}{Amostra\PYZus{}original}\PY{o}{\PYZdl{}}\PY{n}{y}\PY{p}{,} \PY{n}{X}\PY{p}{,} \PY{n}{phiLags} \PY{o}{=} \PY{k+kc}{NULL} \PY{p}{,}\PY{n}{thetaLags} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+m}{1}\PY{p}{)}\PY{p}{,} \PY{n}{type} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Poi\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{9}{\boxspacing}
+\prompt{In}{incolor}{61}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{Theta}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n}{result}\PY{o}{\PYZdl{}}\PY{n}{delta}\PY{p}{[}\PY{l+m}{2}\PY{p}{]}
 \PY{n}{Theta}
 \end{Verbatim}
 \end{tcolorbox}
 
-    \textbf{theta\textbackslash{}\_1:} 0.338920651879532
+    \textbf{theta\textbackslash{}\_1:} 0.294824377637891
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{10}{\boxspacing}
+\prompt{In}{incolor}{62}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{Beta}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n}{result}\PY{o}{\PYZdl{}}\PY{n}{delta}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}
 \PY{n}{Beta}
 \end{Verbatim}
 \end{tcolorbox}
 
-    \textbf{Intercept:} 1.13435742153011
+    \textbf{Intercept:} 0.929757901771993
 
     
     Conseguimos recuperar os parâmetros bem, está tudo certo.
@@ -656,13 +660,13 @@ Beta\_bootstrap e Theta\_bootstrap e seus intervalos de confiança.
 Finalmente, ela também retorna a Amostra original.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{3}{\boxspacing}
+\prompt{In}{incolor}{47}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{bootstrap\PYZus{}parametrico} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{B}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{n}{beta}\PY{o}{=}\PY{l+m}{1}\PY{p}{,}\PY{n}{theta}\PY{o}{=}\PY{l+m}{0.3}\PY{p}{)}
 
     \PY{p}{\PYZob{}}
 
-    \PY{n}{Amostra\PYZus{}original}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{simulate\PYZus{}glarma}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{n}{beta}\PY{o}{=}\PY{l+m}{1}\PY{p}{,}\PY{n}{theta}\PY{o}{=}\PY{l+m}{0.3}\PY{p}{,}\PY{n}{x}\PY{o}{=}\PY{k+kc}{NULL}\PY{p}{)}
+    \PY{n}{Amostra\PYZus{}original}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{simulate\PYZus{}glarma}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{n+nb+bp}{T}\PY{p}{,}\PY{n}{beta}\PY{o}{=}\PY{l+m}{1}\PY{p}{,}\PY{n}{theta}\PY{o}{=}\PY{l+m}{0.3}\PY{p}{,}\PY{n}{x}\PY{o}{=}\PY{k+kc}{NULL}\PY{p}{)}
     \PY{n}{X} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{Amostra\PYZus{}original}\PY{o}{\PYZdl{}}\PY{n}{x}
     \PY{n}{X} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.matrix}\PY{p}{(}\PY{n}{X}\PY{p}{)}
     \PY{n+nf}{colnames}\PY{p}{(}\PY{n}{X}\PY{p}{)} \PY{o}{\PYZlt{}\PYZhy{}} \PY{l+s}{\PYZdq{}}\PY{l+s}{Intercept\PYZdq{}}
@@ -1564,7 +1568,7 @@ experimento Monte Carlo para o código ficar completo:
   \PY{n}{e} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{numeric}\PY{p}{(}\PY{n+nb+bp}{T}\PY{p}{)}
   \PY{n}{z} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{numeric}\PY{p}{(}\PY{n+nb+bp}{T}\PY{p}{)}
   
-  \PY{c+c1}{\PYZsh{}passo 1, recontruir z,e,mu}
+  \PY{c+c1}{\PYZsh{}passo 1, reconstruir z,e,mu}
     
   \PY{n+nf}{for }\PY{p}{(}\PY{n}{t} \PY{n}{in} \PY{l+m}{1}\PY{o}{:}\PY{n+nb+bp}{T}\PY{p}{)} \PY{p}{\PYZob{}}
       
@@ -1594,7 +1598,7 @@ experimento Monte Carlo para o código ficar completo:
 bootstrap paramétrico já apresentado.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{42}{\boxspacing}
+\prompt{In}{incolor}{67}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{intervalo\PYZus{}preditivo\PYZus{}bootstrap} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n+nb+bp}{T}\PY{o}{=}\PY{l+m}{100}\PY{p}{,}\PY{n}{B}\PY{o}{=}\PY{l+m}{100}\PY{p}{,} \PY{n}{beta} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{theta} \PY{o}{=} \PY{l+m}{0.3}\PY{p}{,}\PY{n}{R}\PY{o}{=}\PY{l+m}{2}\PY{p}{)}\PY{p}{\PYZob{}}
     
@@ -1618,7 +1622,8 @@ bootstrap paramétrico já apresentado.
     \PY{n}{Y} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{boot}\PY{o}{\PYZdl{}}\PY{n}{Amostra\PYZus{}original}
     \PY{n}{Y\PYZus{}train} \PY{o}{=} \PY{n}{Y}\PY{p}{[}\PY{l+m}{1}\PY{o}{:}\PY{p}{(}\PY{n+nb+bp}{T}\PY{l+m}{\PYZhy{}1}\PY{p}{)}\PY{p}{]}
     \PY{n}{Y\PYZus{}test} \PY{o}{=} \PY{n}{Y}\PY{p}{[}\PY{n+nb+bp}{T}\PY{p}{]}
-    
+    \PY{n}{Y\PYZus{}teste}\PY{p}{[}\PY{n}{r}\PY{p}{]}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n}{Y\PYZus{}test}
+
     \PY{n}{theta\PYZus{}boot}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n}{boot}\PY{o}{\PYZdl{}}\PY{n}{Theta\PYZus{}bootstrap}\PY{o}{\PYZdl{}}\PY{n}{theta}
     \PY{n}{beta\PYZus{}boot}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n}{boot}\PY{o}{\PYZdl{}}\PY{n}{Beta\PYZus{}bootstrap}\PY{o}{\PYZdl{}}\PY{n}{beta}
     
@@ -1629,10 +1634,10 @@ bootstrap paramétrico já apresentado.
         \PY{p}{\PYZcb{}}
         
     \PY{n}{mean\PYZus{}Y\PYZus{}pred}\PY{p}{[}\PY{n}{r}\PY{p}{]}\PY{o}{=}\PY{n+nf}{mean}\PY{p}{(}\PY{n}{Y\PYZus{}pred}\PY{p}{,}\PY{n}{na.rm}\PY{o}{=}\PY{k+kc}{TRUE}\PY{p}{)}
+        
     \PY{n}{IC\PYZus{}pred}\PY{p}{[[}\PY{n}{r}\PY{p}{]]}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{quantile}\PY{p}{(}\PY{n}{Y\PYZus{}pred}\PY{p}{,}\PY{n}{probs} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+m}{0.025}\PY{p}{,} \PY{l+m}{0.975}\PY{p}{)}\PY{p}{,}\PY{n}{na.rm}\PY{o}{=}\PY{k+kc}{TRUE}\PY{p}{)}
     \PY{n}{IC\PYZus{}pred}\PY{p}{[[}\PY{n}{r}\PY{p}{]]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n+nf}{floor}\PY{p}{(}\PY{n}{IC\PYZus{}pred}\PY{p}{[[}\PY{n}{r}\PY{p}{]]}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n+nf}{ceiling}\PY{p}{(}\PY{n}{IC\PYZus{}pred}\PY{p}{[[}\PY{n}{r}\PY{p}{]]}\PY{p}{[}\PY{l+m}{2}\PY{p}{]}\PY{p}{)}\PY{p}{)}
 
-    \PY{n}{Y\PYZus{}teste}\PY{p}{[}\PY{n}{r}\PY{p}{]}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n}{Y\PYZus{}test}
     \PY{p}{\PYZcb{}}
     
         \PY{n+nf}{return}\PY{p}{(}\PY{n+nf}{list}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Y\PYZus{}test\PYZsq{}}\PY{o}{=}\PY{n}{Y\PYZus{}teste}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{IC\PYZus{}pred\PYZsq{}}\PY{o}{=}\PY{n}{IC\PYZus{}pred}\PY{p}{)}\PY{p}{)}
@@ -1641,7 +1646,7 @@ bootstrap paramétrico já apresentado.
 \end{tcolorbox}
 
     Eu arredondei os limites dos intervalos para o inteiro mais próximo,
-pois o Y\_test é inteiro.
+pois o Y\_test é inteiro
 
     conferindo\_IP verifica o percentual de intervalos que contém o
 Y\_teste:
@@ -1697,6 +1702,9 @@ Y\_teste:
 
     
     Nos 10 experimentos feitos, o Y\_teste está no intervalo 8 vezes.
+
+    Fiquei com dúvida na questão 3, poderia me ajudar após a entrega do
+trabalho?
 
 
     % Add a bibliography block to the postdoc
