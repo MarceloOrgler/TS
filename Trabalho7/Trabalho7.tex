@@ -808,71 +808,65 @@ os níveis de confiança.
     Rodando nossa regressão com os splines:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{23}{\boxspacing}
+\prompt{In}{incolor}{26}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-\PY{n}{other\PYZus{}covs} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{X}\PY{p}{[}\PY{p}{,}\PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{tempmed\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{CO\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{SO2\PYZsq{}}\PY{p}{)}\PY{p}{]}
+\PY{n}{other\PYZus{}covs} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{X}\PY{p}{[}\PY{p}{,}\PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{CO\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{SO2\PYZsq{}}\PY{p}{)}\PY{p}{]}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{24}{\boxspacing}
+\prompt{In}{incolor}{27}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{resposta}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{select\PYZus{}best\PYZus{}k\PYZus{}multi}\PY{p}{(}\PY{n}{y}\PY{o}{=}\PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{Atendimentos}\PY{p}{,}\PY{n}{z}\PY{o}{=}\PY{n+nf}{list}\PY{p}{(}\PY{n}{O3}\PY{o}{=}\PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{O3}\PY{p}{,}\PY{n}{tempmed}\PY{o}{=}\PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{tempmed}\PY{p}{)}\PY{p}{,}\PY{n}{other\PYZus{}covariates} \PY{o}{=} \PY{n}{other\PYZus{}covs}\PY{p}{,}
-                        \PY{n}{k\PYZus{}ranges}\PY{o}{=}\PY{n+nf}{list}\PY{p}{(}\PY{n}{O3}\PY{o}{=}\PY{l+m}{1}\PY{o}{:}\PY{l+m}{8}\PY{p}{,}\PY{n}{temp\PYZus{}med}\PY{o}{=}\PY{l+m}{1}\PY{o}{:}\PY{l+m}{8}\PY{p}{)}\PY{p}{,}\PY{n}{np}\PY{o}{=}\PY{l+m}{3}\PY{p}{,}\PY{n}{nq}\PY{o}{=}\PY{l+m}{0}\PY{p}{,}\PY{n}{lamb} \PY{o}{=}\PY{l+m}{0.5}\PY{p}{,}\PY{n}{Ind}\PY{o}{=}\PY{l+m}{0}\PY{p}{)}
+                        \PY{n}{k\PYZus{}ranges}\PY{o}{=}\PY{n+nf}{list}\PY{p}{(}\PY{n}{O3}\PY{o}{=}\PY{l+m}{1}\PY{o}{:}\PY{l+m}{8}\PY{p}{,}\PY{n}{temp\PYZus{}med}\PY{o}{=}\PY{l+m}{1}\PY{o}{:}\PY{l+m}{8}\PY{p}{)}\PY{p}{,}\PY{n}{np}\PY{o}{=}\PY{l+m}{2}\PY{p}{,}\PY{n}{nq}\PY{o}{=}\PY{l+m}{0}\PY{p}{,}\PY{n}{lamb} \PY{o}{=}\PY{l+m}{0.5}\PY{p}{,}\PY{n}{Ind}\PY{o}{=}\PY{l+m}{0}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{25}{\boxspacing}
+\prompt{In}{incolor}{28}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{resposta}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{description}
-\item[\$AIC] -7840.30738737551
-\item[\$logLik] 3942.15369368775
-\item[\$beta0] 2.76306610689278
+\item[\$AIC] -7880.60427818474
+\item[\$logLik] 3956.30213909237
+\item[\$beta0] 2.59843485605842
 \item[\$beta\_spline] \begin{description}
 \item[\$O3] \begin{enumerate*}
-\item 0.351727607570428
-\item 0.748339770830553
-\item 0.0514625420616618
-\item 1.07794204788271
-\item -0.521010265442694
-\item 0.572686123411616
-\item 0.636101002121954
+\item 0.557087479703682
+\item 1.01386432201725
+\item 0.168233573938302
+\item 1.00037943402399
+\item -0.0851355604022149
+\item 1.18584764885655
+\item 0.604668976606109
 \end{enumerate*}
 
 \item[\$tempmed] \begin{enumerate*}
-\item -0.10411575379499
-\item -0.342784661481924
-\item -0.0206866784576695
-\item -0.127113092415123
-\item -0.622252363904484
-\item 0.0563834096290639
-\item -1.64067137163042
-\item -1.7303685099724
+\item -0.10119510086432
+\item 0.185427749788261
+\item -0.761639073917291
+\item -0.888548466618969
 \end{enumerate*}
 
 \end{description}
 
 \item[\$beta\_other] \begin{enumerate*}
-\item 0.0284734533890816
-\item 0.000740302083696139
-\item -0.0866522606064693
+\item 0.000270310121205097
+\item -0.0176177071124713
 \end{enumerate*}
 
 \item[\$fi] \begin{enumerate*}
-\item 0.0433467203032375
-\item 0.00227101251663183
-\item -0.0660772354515024
+\item 0.128803204741631
+\item 0.0648234791868851
 \end{enumerate*}
 
 \item[\$theta] 
 \item[\$k\_list] \begin{description}
 \item[\$O3] 7
-\item[\$temp\_med] 8
+\item[\$temp\_med] 4
 \end{description}
 
 \end{description}

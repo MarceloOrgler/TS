@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  30 JUN 2025 08:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  30 JUN 2025 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1054,20 +1054,14 @@ ates []
 
 [10 <./Trabalho7_files/Trabalho7_24_0.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 838--846
-[][][]\T1/ppl/m/n/10.95 1.[]  0.351727607570428[] []2.[]  0.748339770830553[] [
-]3.[]  0.0514625420616618[]
+[][][]\T1/ppl/m/n/10.95 1.[]  0.557087479703682[] []2.[]  1.01386432201725[] []
+3.[]  0.168233573938302[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--857
-[][][]\T1/ppl/m/n/10.95 1.[]  -0.10411575379499[] []2.[]  -0.342784661481924[] 
-[]3.[]  -0.0206866784576695[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 848--857
-[]\T1/ppl/m/n/10.95 4.[]  -0.127113092415123[] []5.[]  -0.622252363904484[] []6
-.[]  0.0563834096290639[]
+Underfull \hbox (badness 10000) in paragraph at lines 848--853
+[][][]\T1/ppl/m/n/10.95 1.[]  -0.10119510086432[] []2.[]  0.185427749788261[] [
+]3.[]  -0.761639073917291[]
  []
 
 [11] (Trabalho7.aux)
@@ -1079,8 +1073,8 @@ Package rerunfilecheck Info: File `Trabalho7.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25138 strings out of 474486
- 470784 string characters out of 5742811
+ 25132 strings out of 474486
+ 470742 string characters out of 5742811
  2056542 words of memory out of 5000000
  46937 multiletter control sequences out of 15000+600000
  582142 words of font info for 97 fonts, out of 8000000 for 9000
@@ -1094,9 +1088,9 @@ pen/ec/dpi600\ectt1095.pk><C:/Users/Marcelo/AppData/Local/Programs/MiKTeX/fonts
 iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marcelo/AppData/Local
 /Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Marcelo/AppData/
 Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Trabalho7.pdf (11 pages, 183210 bytes).
+Output written on Trabalho7.pdf (11 pages, 182440 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
