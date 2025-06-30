@@ -380,7 +380,7 @@
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{23}{\boxspacing}
+\prompt{In}{incolor}{5}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{library}\PY{p}{(}\PY{n}{pacman}\PY{p}{)}
 \PY{n+nf}{p\PYZus{}load}\PY{p}{(}\PY{n}{dplyr}\PY{p}{,}\PY{n}{tidyr}\PY{p}{,}\PY{n}{splines}\PY{p}{,}\PY{n}{glarma}\PY{p}{)}
@@ -388,7 +388,7 @@
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{24}{\boxspacing}
+\prompt{In}{incolor}{6}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{setwd}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{C:\PYZbs{}\PYZbs{}Users\PYZbs{}\PYZbs{}Marcelo\PYZbs{}\PYZbs{}OneDrive\PYZbs{}\PYZbs{}Área de Trabalho\PYZbs{}\PYZbs{}ts\PYZbs{}\PYZbs{}trabalho 2 \PYZhy{} TS\PYZbs{}\PYZbs{}Trabalho7\PYZsq{}}\PY{p}{)}
 \PY{n+nf}{getwd}\PY{p}{(}\PY{p}{)}
@@ -398,93 +398,13 @@
     'C:/Users/Marcelo/OneDrive/Área de Trabalho/ts/trabalho 2 - TS/Trabalho7'
 
     
-    Função de Verossimilhança da Professora:
+    Função de Verossimilhança da Professora está no script7.R para não
+poluir o notebook.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{25}{\boxspacing}
+\prompt{In}{incolor}{7}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-\PY{n}{Like} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{Parametros}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{nb}\PY{p}{,} \PY{n}{np}\PY{p}{,} \PY{n}{nq}\PY{p}{,} \PY{n}{lamb}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{Ind}\PY{p}{)} \PY{p}{\PYZob{}}
-  
-    
-  \PY{n}{ny} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{length}\PY{p}{(}\PY{n}{y}\PY{p}{)}
-  
-  \PY{c+c1}{\PYZsh{} Separating parameters: beta, fi, theta}
-  \PY{n+nf}{if }\PY{p}{(}\PY{n}{nb} \PY{o}{\PYZgt{}} \PY{l+m}{0}\PY{p}{)} \PY{p}{\PYZob{}}
-    \PY{n}{beta} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{Parametros}\PY{p}{[}\PY{l+m}{1}\PY{o}{:}\PY{n}{nb}\PY{p}{]}
-  \PY{p}{\PYZcb{}}
-  
-  \PY{n}{ar\PYZus{}ma\PYZus{}start} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{nb} \PY{o}{+} \PY{l+m}{1}
-  
-  \PY{n+nf}{if }\PY{p}{(}\PY{n}{np} \PY{o}{\PYZgt{}} \PY{l+m}{0} \PY{o}{\PYZam{}\PYZam{}} \PY{n}{nq} \PY{o}{==} \PY{l+m}{0}\PY{p}{)} \PY{p}{\PYZob{}}
-    \PY{n}{fi} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{Parametros}\PY{p}{[}\PY{n}{ar\PYZus{}ma\PYZus{}start}\PY{o}{:}\PY{p}{(}\PY{n}{ar\PYZus{}ma\PYZus{}start} \PY{o}{+} \PY{n}{np} \PY{o}{\PYZhy{}} \PY{l+m}{1}\PY{p}{)}\PY{p}{]}
-  \PY{p}{\PYZcb{}}
-  
-  \PY{n+nf}{if }\PY{p}{(}\PY{n}{nq} \PY{o}{\PYZgt{}} \PY{l+m}{0} \PY{o}{\PYZam{}\PYZam{}} \PY{n}{np} \PY{o}{==} \PY{l+m}{0}\PY{p}{)} \PY{p}{\PYZob{}}
-    \PY{n}{theta} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{Parametros}\PY{p}{[}\PY{n}{ar\PYZus{}ma\PYZus{}start}\PY{o}{:}\PY{p}{(}\PY{n}{ar\PYZus{}ma\PYZus{}start} \PY{o}{+} \PY{n}{nq} \PY{o}{\PYZhy{}} \PY{l+m}{1}\PY{p}{)}\PY{p}{]}
-  \PY{p}{\PYZcb{}}
-  
-  \PY{n+nf}{if }\PY{p}{(}\PY{n}{np} \PY{o}{\PYZgt{}} \PY{l+m}{0} \PY{o}{\PYZam{}\PYZam{}} \PY{n}{nq} \PY{o}{\PYZgt{}} \PY{l+m}{0}\PY{p}{)} \PY{p}{\PYZob{}}
-    \PY{n}{fi} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{Parametros}\PY{p}{[}\PY{n}{ar\PYZus{}ma\PYZus{}start}\PY{o}{:}\PY{p}{(}\PY{n}{ar\PYZus{}ma\PYZus{}start} \PY{o}{+} \PY{n}{np} \PY{o}{\PYZhy{}} \PY{l+m}{1}\PY{p}{)}\PY{p}{]}
-    \PY{n}{theta} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{Parametros}\PY{p}{[}\PY{p}{(}\PY{n}{ar\PYZus{}ma\PYZus{}start} \PY{o}{+} \PY{n}{np}\PY{p}{)}\PY{o}{:}\PY{p}{(}\PY{n}{ar\PYZus{}ma\PYZus{}start} \PY{o}{+} \PY{n}{np} \PY{o}{+} \PY{n}{nq} \PY{o}{\PYZhy{}} \PY{l+m}{1}\PY{p}{)}\PY{p}{]}
-  \PY{p}{\PYZcb{}}
-  
-  \PY{c+c1}{\PYZsh{} Initialize variables}
-  \PY{n}{z}    \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{rep}\PY{p}{(}\PY{l+m}{0}\PY{p}{,} \PY{n}{ny}\PY{p}{)}
-  \PY{n}{w}    \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{rep}\PY{p}{(}\PY{l+m}{0}\PY{p}{,} \PY{n}{ny}\PY{p}{)}
-  \PY{n}{mi}   \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{rep}\PY{p}{(}\PY{l+m}{0}\PY{p}{,} \PY{n}{ny}\PY{p}{)}
-  \PY{n}{erro} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{rep}\PY{p}{(}\PY{l+m}{0}\PY{p}{,} \PY{n}{ny}\PY{p}{)}
-  
-  \PY{c+c1}{\PYZsh{} First observation: compute w[1]}
-  \PY{n+nf}{if }\PY{p}{(}\PY{n}{nb} \PY{o}{==} \PY{l+m}{0}\PY{p}{)} \PY{p}{\PYZob{}}
-    \PY{n}{w}\PY{p}{[}\PY{l+m}{1}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{l+m}{0}
-  \PY{p}{\PYZcb{}} \PY{n}{else} \PY{n+nf}{if }\PY{p}{(}\PY{n}{nb} \PY{o}{==} \PY{l+m}{1}\PY{p}{)} \PY{p}{\PYZob{}}
-    \PY{n}{w}\PY{p}{[}\PY{l+m}{1}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{beta}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}
-  \PY{p}{\PYZcb{}} \PY{n}{else} \PY{p}{\PYZob{}}
-    \PY{n}{w}\PY{p}{[}\PY{l+m}{1}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{beta}\PY{p}{[}\PY{l+m}{1}\PY{p}{]} \PY{o}{+} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{l+m}{1}\PY{p}{,} \PY{l+m}{1}\PY{o}{:}\PY{p}{(}\PY{n}{nb} \PY{o}{\PYZhy{}} \PY{l+m}{1}\PY{p}{)}\PY{p}{]} \PY{o}{\PYZpc{}*\PYZpc{}} \PY{n}{beta}\PY{p}{[}\PY{l+m}{2}\PY{o}{:}\PY{n}{nb}\PY{p}{]}\PY{p}{)}
-  \PY{p}{\PYZcb{}}
-  
-  \PY{n}{mi}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}   \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{exp}\PY{p}{(}\PY{n}{w}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{p}{)}
-  \PY{n}{erro}\PY{p}{[}\PY{l+m}{1}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{p}{(}\PY{n}{y}\PY{p}{[}\PY{l+m}{1}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n}{mi}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{p}{)} \PY{o}{/} \PY{p}{(}\PY{n}{mi}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{o}{\PYZca{}}\PY{n}{lamb}\PY{p}{)}
-  \PY{n}{L}       \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{y}\PY{p}{[}\PY{l+m}{1}\PY{p}{]} \PY{o}{*} \PY{n}{w}\PY{p}{[}\PY{l+m}{1}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n+nf}{exp}\PY{p}{(}\PY{n}{w}\PY{p}{[}\PY{l+m}{1}\PY{p}{]}\PY{p}{)}
-  
-  \PY{c+c1}{\PYZsh{} Loop over t = 2 to ny}
-  \PY{n+nf}{for }\PY{p}{(}\PY{n}{t} \PY{n}{in} \PY{l+m}{2}\PY{o}{:}\PY{n}{ny}\PY{p}{)} \PY{p}{\PYZob{}}
-    
-    \PY{c+c1}{\PYZsh{} AR component}
-    \PY{n+nf}{if }\PY{p}{(}\PY{n}{np} \PY{o}{\PYZgt{}} \PY{l+m}{0}\PY{p}{)} \PY{p}{\PYZob{}}
-      \PY{n+nf}{for }\PY{p}{(}\PY{n}{k} \PY{n}{in} \PY{l+m}{1}\PY{o}{:}\PY{n+nf}{min}\PY{p}{(}\PY{n}{np}\PY{p}{,} \PY{n}{t} \PY{o}{\PYZhy{}} \PY{l+m}{1}\PY{p}{)}\PY{p}{)} \PY{p}{\PYZob{}}
-        \PY{n}{z}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{z}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{+} \PY{n}{fi}\PY{p}{[}\PY{n}{k}\PY{p}{]} \PY{o}{*} \PY{p}{(}\PY{n}{z}\PY{p}{[}\PY{n}{t} \PY{o}{\PYZhy{}} \PY{n}{k}\PY{p}{]} \PY{o}{+} \PY{n}{erro}\PY{p}{[}\PY{n}{t} \PY{o}{\PYZhy{}} \PY{n}{k}\PY{p}{]}\PY{p}{)}
-      \PY{p}{\PYZcb{}}
-    \PY{p}{\PYZcb{}}
-    
-    \PY{c+c1}{\PYZsh{} MA component}
-    \PY{n+nf}{if }\PY{p}{(}\PY{n}{nq} \PY{o}{\PYZgt{}} \PY{l+m}{0}\PY{p}{)} \PY{p}{\PYZob{}}
-      \PY{n+nf}{for }\PY{p}{(}\PY{n}{k} \PY{n}{in} \PY{l+m}{1}\PY{o}{:}\PY{n+nf}{min}\PY{p}{(}\PY{n}{nq}\PY{p}{,} \PY{n}{t} \PY{o}{\PYZhy{}} \PY{l+m}{1}\PY{p}{)}\PY{p}{)} \PY{p}{\PYZob{}}
-        \PY{n}{z}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{z}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{+} \PY{n}{theta}\PY{p}{[}\PY{n}{k}\PY{p}{]} \PY{o}{*} \PY{n}{erro}\PY{p}{[}\PY{n}{t} \PY{o}{\PYZhy{}} \PY{n}{k}\PY{p}{]}
-      \PY{p}{\PYZcb{}}
-    \PY{p}{\PYZcb{}}
-    
-    \PY{c+c1}{\PYZsh{} Compute w[t] based on z[t] and x[t,]}
-    \PY{n+nf}{if }\PY{p}{(}\PY{n}{nb} \PY{o}{==} \PY{l+m}{0}\PY{p}{)} \PY{p}{\PYZob{}}
-      \PY{n}{w}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{z}\PY{p}{[}\PY{n}{t}\PY{p}{]}
-    \PY{p}{\PYZcb{}} \PY{n}{else} \PY{n+nf}{if }\PY{p}{(}\PY{n}{nb} \PY{o}{==} \PY{l+m}{1}\PY{p}{)} \PY{p}{\PYZob{}}
-      \PY{n}{w}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{beta}\PY{p}{[}\PY{l+m}{1}\PY{p}{]} \PY{o}{+} \PY{n}{z}\PY{p}{[}\PY{n}{t}\PY{p}{]}
-    \PY{p}{\PYZcb{}} \PY{n}{else} \PY{p}{\PYZob{}}
-      \PY{n}{w}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{beta}\PY{p}{[}\PY{l+m}{1}\PY{p}{]} \PY{o}{+} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{n}{t}\PY{p}{,} \PY{l+m}{1}\PY{o}{:}\PY{p}{(}\PY{n}{nb} \PY{o}{\PYZhy{}} \PY{l+m}{1}\PY{p}{)}\PY{p}{]} \PY{o}{\PYZpc{}*\PYZpc{}} \PY{n}{beta}\PY{p}{[}\PY{l+m}{2}\PY{o}{:}\PY{n}{nb}\PY{p}{]}\PY{p}{)} \PY{o}{+} \PY{n}{z}\PY{p}{[}\PY{n}{t}\PY{p}{]}
-    \PY{p}{\PYZcb{}}
-    
-    \PY{n}{mi}\PY{p}{[}\PY{n}{t}\PY{p}{]}   \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{exp}\PY{p}{(}\PY{n}{w}\PY{p}{[}\PY{n}{t}\PY{p}{]}\PY{p}{)}
-    \PY{n}{erro}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{p}{(}\PY{n}{y}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n}{mi}\PY{p}{[}\PY{n}{t}\PY{p}{]}\PY{p}{)} \PY{o}{/} \PY{p}{(}\PY{n}{mi}\PY{p}{[}\PY{n}{t}\PY{p}{]}\PY{o}{\PYZca{}}\PY{n}{lamb}\PY{p}{)}
-    \PY{n}{L}       \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{L} \PY{o}{+} \PY{n}{y}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{*} \PY{n}{w}\PY{p}{[}\PY{n}{t}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n+nf}{exp}\PY{p}{(}\PY{n}{w}\PY{p}{[}\PY{n}{t}\PY{p}{]}\PY{p}{)}
-  \PY{p}{\PYZcb{}}
-  
-  \PY{n}{L} \PY{o}{\PYZlt{}\PYZhy{}} \PY{o}{\PYZhy{}}\PY{n}{L}  \PY{c+c1}{\PYZsh{} negative log\PYZhy{}likelihood}
-  
-  \PY{n}{valores} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{cbind}\PY{p}{(}\PY{n}{erro}\PY{p}{,} \PY{n}{z}\PY{p}{,} \PY{n}{mi}\PY{p}{)}
-  
-  \PY{n+nf}{if }\PY{p}{(}\PY{n}{Ind} \PY{o}{==} \PY{l+m}{0}\PY{p}{)} \PY{n+nf}{return}\PY{p}{(}\PY{n}{L}\PY{p}{)}
-  \PY{n+nf}{if }\PY{p}{(}\PY{n}{Ind} \PY{o}{==} \PY{l+m}{1}\PY{p}{)} \PY{n+nf}{return}\PY{p}{(}\PY{n}{valores}\PY{p}{)}
-\PY{p}{\PYZcb{}}
+\PY{n+nf}{source}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{script7.R\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
@@ -492,7 +412,7 @@
 bases para cada covariável não linear:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{26}{\boxspacing}
+\prompt{In}{incolor}{8}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{MLE\PYZus{}com\PYZus{}splines} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{z\PYZus{}list}\PY{p}{,} \PY{n}{k\PYZus{}list}\PY{p}{,}
                           \PY{n}{other\PYZus{}covariates} \PY{o}{=} \PY{k+kc}{NULL}\PY{p}{,}
@@ -590,7 +510,7 @@ bases para cada covariável não linear:
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{27}{\boxspacing}
+\prompt{In}{incolor}{9}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{select\PYZus{}best\PYZus{}k\PYZus{}multi} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{z\PYZus{}list}\PY{p}{,} \PY{n}{k\PYZus{}ranges}\PY{p}{,}
                                 \PY{n}{other\PYZus{}covariates} \PY{o}{=} \PY{k+kc}{NULL}\PY{p}{,}
@@ -642,14 +562,14 @@ bases para cada covariável não linear:
     Pegando o dataset de Doença respiratórias:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{28}{\boxspacing}
+\prompt{In}{incolor}{10}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{read.csv}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{DR.csv\PYZdq{}}\PY{p}{,}\PY{n}{header} \PY{o}{=} \PY{k+kc}{TRUE}\PY{p}{,}\PY{n}{sep}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{;\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{29}{\boxspacing}
+\prompt{In}{incolor}{11}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{summary}\PY{p}{(}\PY{n}{df}\PY{p}{)}
 \end{Verbatim}
@@ -675,7 +595,7 @@ bases para cada covariável não linear:
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{30}{\boxspacing}
+\prompt{In}{incolor}{12}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df}\PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{df} \PY{o}{\PYZpc{}\PYZgt{}\PYZpc{}} \PY{n+nf}{select}\PY{p}{(}\PY{n}{Atendimentos}\PY{p}{,}\PY{n}{tempmed}\PY{p}{,}\PY{n}{O3}\PY{p}{,}\PY{n}{CO}\PY{p}{,}\PY{n}{NO2}\PY{p}{,}\PY{n}{SO2}\PY{p}{)}
 \end{Verbatim}
@@ -684,7 +604,7 @@ bases para cada covariável não linear:
     Limpando os dados:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{31}{\boxspacing}
+\prompt{In}{incolor}{13}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df}\PY{p}{[}\PY{p}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{lapply}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{n+nf}{function}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{p}{\PYZob{}}
   \PY{n+nf}{if }\PY{p}{(}\PY{n+nf}{is.character}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{n+nf}{gsub}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{,\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{.\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{p}{)}\PY{p}{)} \PY{n}{else} \PY{n}{x}
@@ -693,7 +613,7 @@ bases para cada covariável não linear:
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{32}{\boxspacing}
+\prompt{In}{incolor}{14}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{summary}\PY{p}{(}\PY{n}{df}\PY{p}{)}
 \end{Verbatim}
@@ -719,7 +639,7 @@ bases para cada covariável não linear:
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{33}{\boxspacing}
+\prompt{In}{incolor}{15}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{df}\PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{df} \PY{o}{\PYZpc{}\PYZgt{}\PYZpc{}} \PY{n+nf}{drop\PYZus{}na}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
@@ -728,7 +648,7 @@ bases para cada covariável não linear:
     Montando o X:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{34}{\boxspacing}
+\prompt{In}{incolor}{16}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{X} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.matrix}\PY{p}{(}\PY{n}{df}\PY{p}{[} \PY{p}{,} \PY{n+nf}{setdiff}\PY{p}{(}\PY{n+nf}{names}\PY{p}{(}\PY{n}{df}\PY{p}{)}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{Atendimentos\PYZdq{}}\PY{p}{)}\PY{p}{]}\PY{p}{)}
 \end{Verbatim}
@@ -737,7 +657,7 @@ bases para cada covariável não linear:
     Ajustando o modelo sem os splines:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{35}{\boxspacing}
+\prompt{In}{incolor}{17}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fit} \PY{o}{=}\PY{n+nf}{glarma}\PY{p}{(}\PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{Atendimentos}\PY{p}{,} \PY{n}{X}\PY{o}{=}\PY{n}{X} \PY{p}{,} \PY{n}{phiLags} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+m}{1}\PY{p}{)} \PY{p}{,}\PY{n}{thetaLags} \PY{o}{=} \PY{k+kc}{NULL}\PY{p}{,} \PY{n}{type} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Poi\PYZdq{}}\PY{p}{)}
 \PY{n+nf}{summary}\PY{p}{(}\PY{n}{fit}\PY{p}{)}
@@ -785,7 +705,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{36}{\boxspacing}
+\prompt{In}{incolor}{18}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{fit} \PY{o}{=}\PY{n+nf}{glarma}\PY{p}{(}\PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{Atendimentos}\PY{p}{,} \PY{n}{X}\PY{o}{=}\PY{n}{X}\PY{p}{[}\PY{p}{,}\PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{tempmed\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{O3\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{CO\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{SO2\PYZsq{}}\PY{p}{)}\PY{p}{]} \PY{p}{,} \PY{n}{phiLags} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+m}{1}\PY{p}{,}\PY{l+m}{2}\PY{p}{)} \PY{p}{,}\PY{n}{thetaLags} \PY{o}{=} \PY{k+kc}{NULL}\PY{p}{,} \PY{n}{type} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Poi\PYZdq{}}\PY{p}{)}
 \PY{n+nf}{summary}\PY{p}{(}\PY{n}{fit}\PY{p}{)}
@@ -836,7 +756,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 os níveis de confiança.
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{37}{\boxspacing}
+\prompt{In}{incolor}{19}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{plot}\PY{p}{(}\PY{n}{X}\PY{p}{[}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{O3\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{Atendimento}\PY{p}{,} \PY{n}{main} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Atendimento X O3\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
@@ -848,7 +768,7 @@ os níveis de confiança.
     { \hspace*{\fill} \\}
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{38}{\boxspacing}
+\prompt{In}{incolor}{20}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{plot}\PY{p}{(}\PY{n}{X}\PY{p}{[}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{tempmed\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{Atendimento}\PY{p}{,} \PY{n}{main} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Atendimento X tempmed\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
@@ -860,7 +780,7 @@ os níveis de confiança.
     { \hspace*{\fill} \\}
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{39}{\boxspacing}
+\prompt{In}{incolor}{21}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{plot}\PY{p}{(}\PY{n}{X}\PY{p}{[}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{CO\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{Atendimento}\PY{p}{,} \PY{n}{main} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Atendimento X CO\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
@@ -872,7 +792,7 @@ os níveis de confiança.
     { \hspace*{\fill} \\}
     
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{40}{\boxspacing}
+\prompt{In}{incolor}{22}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n+nf}{plot}\PY{p}{(}\PY{n}{X}\PY{p}{[}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{SO2\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{Atendimento}\PY{p}{,} \PY{n}{main} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{Atendimento X SO2\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
@@ -888,14 +808,14 @@ os níveis de confiança.
     Rodando nossa regressão com os splines:
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{41}{\boxspacing}
+\prompt{In}{incolor}{23}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{other\PYZus{}covs} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{X}\PY{p}{[}\PY{p}{,}\PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{tempmed\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{CO\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{SO2\PYZsq{}}\PY{p}{)}\PY{p}{]}
 \end{Verbatim}
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{42}{\boxspacing}
+\prompt{In}{incolor}{24}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{resposta}\PY{o}{\PYZlt{}\PYZhy{}}\PY{n+nf}{select\PYZus{}best\PYZus{}k\PYZus{}multi}\PY{p}{(}\PY{n}{y}\PY{o}{=}\PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{Atendimentos}\PY{p}{,}\PY{n}{z}\PY{o}{=}\PY{n+nf}{list}\PY{p}{(}\PY{n}{O3}\PY{o}{=}\PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{O3}\PY{p}{,}\PY{n}{tempmed}\PY{o}{=}\PY{n}{df}\PY{o}{\PYZdl{}}\PY{n}{tempmed}\PY{p}{)}\PY{p}{,}\PY{n}{other\PYZus{}covariates} \PY{o}{=} \PY{n}{other\PYZus{}covs}\PY{p}{,}
                         \PY{n}{k\PYZus{}ranges}\PY{o}{=}\PY{n+nf}{list}\PY{p}{(}\PY{n}{O3}\PY{o}{=}\PY{l+m}{1}\PY{o}{:}\PY{l+m}{8}\PY{p}{,}\PY{n}{temp\PYZus{}med}\PY{o}{=}\PY{l+m}{1}\PY{o}{:}\PY{l+m}{8}\PY{p}{)}\PY{p}{,}\PY{n}{np}\PY{o}{=}\PY{l+m}{3}\PY{p}{,}\PY{n}{nq}\PY{o}{=}\PY{l+m}{0}\PY{p}{,}\PY{n}{lamb} \PY{o}{=}\PY{l+m}{0.5}\PY{p}{,}\PY{n}{Ind}\PY{o}{=}\PY{l+m}{0}\PY{p}{)}
@@ -903,7 +823,7 @@ os níveis de confiança.
 \end{tcolorbox}
 
     \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{43}{\boxspacing}
+\prompt{In}{incolor}{25}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{resposta}
 \end{Verbatim}
@@ -959,13 +879,6 @@ os níveis de confiança.
 
 
     
-    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-\prompt{In}{incolor}{ }{\boxspacing}
-\begin{Verbatim}[commandchars=\\\{\}]
-
-\end{Verbatim}
-\end{tcolorbox}
-
 
     % Add a bibliography block to the postdoc
     

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  27 JUN 2025 20:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.3.25)  30 JUN 2025 08:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -822,8 +822,7 @@ dftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box89
-)
-No file Trabalho7.aux.
+) (Trabalho7.aux)
 \openout1 = `Trabalho7.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 375.
@@ -918,6 +917,8 @@ Package caption Info: End \AtBeginDocument code.
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 Package hyperref Info: Link coloring ON on input line 375.
+
+(Trabalho7.out) (Trabalho7.out)
 \@outlinefile=\write5
 \openout5 = `Trabalho7.out'.
 
@@ -991,106 +992,100 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line
 (C:\Users\Marcelo\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 418.
+
 [1
 
 {C:/Users/Marcelo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Ma
 rcelo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 498.
-
-[3] [4] [5] [6] [7] [8]
-<Trabalho7_files/Trabalho7_21_0.png, id=46, 505.89pt x 505.89pt>
+[3] [4] [5] [6]
+<Trabalho7_files/Trabalho7_21_0.png, id=37, 505.89pt x 505.89pt>
 File: Trabalho7_files/Trabalho7_21_0.png Graphic file (type png)
 <use Trabalho7_files/Trabalho7_21_0.png>
 Package pdftex.def Info: Trabalho7_files/Trabalho7_21_0.png  used on input line
- 846.
+ 766.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--849
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
 
  []
 
-<Trabalho7_files/Trabalho7_22_0.png, id=47, 505.89pt x 505.89pt>
+[7 <./Trabalho7_files/Trabalho7_21_0.png>]
+<Trabalho7_files/Trabalho7_22_0.png, id=44, 505.89pt x 505.89pt>
 File: Trabalho7_files/Trabalho7_22_0.png Graphic file (type png)
 <use Trabalho7_files/Trabalho7_22_0.png>
 Package pdftex.def Info: Trabalho7_files/Trabalho7_22_0.png  used on input line
- 858.
+ 778.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
-[9 <./Trabalho7_files/Trabalho7_21_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 860--861
+
+Underfull \hbox (badness 10000) in paragraph at lines 780--781
 
  []
 
-<Trabalho7_files/Trabalho7_23_0.png, id=53, 505.89pt x 505.89pt>
+<Trabalho7_files/Trabalho7_23_0.png, id=45, 505.89pt x 505.89pt>
 File: Trabalho7_files/Trabalho7_23_0.png Graphic file (type png)
 <use Trabalho7_files/Trabalho7_23_0.png>
 Package pdftex.def Info: Trabalho7_files/Trabalho7_23_0.png  used on input line
- 870.
+ 790.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
-[10 <./Trabalho7_files/Trabalho7_22_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 872--873
+[8 <./Trabalho7_files/Trabalho7_22_0.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 792--793
 
  []
 
-<Trabalho7_files/Trabalho7_24_0.png, id=59, 505.89pt x 505.89pt>
+<Trabalho7_files/Trabalho7_24_0.png, id=51, 505.89pt x 505.89pt>
 File: Trabalho7_files/Trabalho7_24_0.png Graphic file (type png)
 <use Trabalho7_files/Trabalho7_24_0.png>
 Package pdftex.def Info: Trabalho7_files/Trabalho7_24_0.png  used on input line
- 882.
+ 802.
 (pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
-[11 <./Trabalho7_files/Trabalho7_23_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 884--885
+[9 <./Trabalho7_files/Trabalho7_23_0.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 804--805
 
  []
 
 
-Overfull \hbox (109.74045pt too wide) in paragraph at lines 900--900
+Overfull \hbox (109.74045pt too wide) in paragraph at lines 820--820
 []|\T1/cmtt/m/n/10.95 resposta[]<-[][]select_best_k_multi[](y[]=[]df[]$[]Atendi
 mentos,z[]=[][]list[](O3[]=[]df[]$[]O3,tempmed[]=[]df[]$[]tempmed),other_covari
 ates [] 
  []
 
-[12 <./Trabalho7_files/Trabalho7_24_0.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 918--926
+[10 <./Trabalho7_files/Trabalho7_24_0.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 838--846
 [][][]\T1/ppl/m/n/10.95 1.[]  0.351727607570428[] []2.[]  0.748339770830553[] [
 ]3.[]  0.0514625420616618[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--937
+Underfull \hbox (badness 10000) in paragraph at lines 848--857
 [][][]\T1/ppl/m/n/10.95 1.[]  -0.10411575379499[] []2.[]  -0.342784661481924[] 
 []3.[]  -0.0206866784576695[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--937
+Underfull \hbox (badness 10000) in paragraph at lines 848--857
 []\T1/ppl/m/n/10.95 4.[]  -0.127113092415123[] []5.[]  -0.622252363904484[] []6
 .[]  0.0563834096290639[]
  []
 
-[13] (Trabalho7.aux)
+[11] (Trabalho7.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-Package rerunfilecheck Warning: File `Trabalho7.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Trabalho7.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `Trabalho7.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25136 strings out of 474486
- 470516 string characters out of 5742811
- 2052542 words of memory out of 5000000
- 46939 multiletter control sequences out of 15000+600000
+ 25138 strings out of 474486
+ 470784 string characters out of 5742811
+ 2056542 words of memory out of 5000000
+ 46937 multiletter control sequences out of 15000+600000
  582142 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,7n,107p,650b,734s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,7n,107p,650b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Marcelo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
 it1095.pk> <C:\Users\Marcelo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
 pi600\tctt1095.pk> <C:\Users\Marcelo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
@@ -1099,9 +1094,9 @@ pen/ec/dpi600\ectt1095.pk><C:/Users/Marcelo/AppData/Local/Programs/MiKTeX/fonts
 iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marcelo/AppData/Local
 /Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Marcelo/AppData/
 Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Trabalho7.pdf (13 pages, 192422 bytes).
+Output written on Trabalho7.pdf (11 pages, 183210 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
+ 241 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
